@@ -1123,18 +1123,18 @@ font-weight:700;
     </div>
   </footer>
 
-  <script>
+<script>
 function copyContract() {
   const contract = document.getElementById("contractAddress");
+
   navigator.clipboard.writeText(contract.value);
 
   const btn = document.querySelector('button[onclick="copyContract()"]');
   btn.innerText = "✓ COPIED";
 
-  setTimeout(() => {
+  setTimeout(function() {
     btn.innerText = "COPY CA";
   }, 2000);
-}
 }
 </script>
 
