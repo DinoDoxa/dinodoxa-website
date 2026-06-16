@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DinoDoxa | The Last Dinosaur on Solana</title>
+  <meta name="description" content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
+  <meta name="theme-color" content="#030603">
+  <meta property="og:title" content="DinoDoxa | The Last Dinosaur on Solana">
+  <meta property="og:description" content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dinodoxa.com">
+  <link rel="canonical" href="https://dinodoxa.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030603;
+      --bg-2: #071007;
+      --panel: rgba(6, 14, 7, .86);
+      --panel-2: rgba(11, 24, 12, .92);
+      --text: #f8fff5;
+      --muted: #b7c5b4;
+      --green: #8de02c;
+      --green-hot: #baff43;
+      --gold: #ffd56a;
+      --line: rgba(141, 224, 44, .35);
+      --gold-line: rgba(255, 213, 106, .38);
+      --image: url("file:///C:/Users/Account/Downloads/WhatsApp%20Image%202026-06-15%20at%2013.07.02.jpeg");
+      --hero-image: url("file:///C:/Users/Account/Downloads/WhatsApp%20Image%202026-06-15%20at%2013.22.54.jpeg");
+      --logo: url("file:///C:/Users/Account/Downloads/WhatsApp%20Image%202026-06-15%20at%2013.23.35.jpeg");
+      --mascot: url("assets/dinodoxa-king.png");
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 0, rgba(141, 224, 44, .15), transparent 36rem),
+        linear-gradient(180deg, #071007, var(--bg));
+      line-height: 1.55;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: var(--image) center top / cover no-repeat;
+      opacity: .16;
+      filter: saturate(1.15);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(3,6,3,.97), rgba(3,6,3,.74), rgba(3,6,3,.95)),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.024) 0 1px, transparent 1px 5px);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, p { margin-top: 0; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(141, 224, 44, .2);
+      background: rgba(3, 6, 3, .84);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--green);
+      font-family: "Changa One", Inter, sans-serif;
+      font-size: 2.4rem;
+      letter-spacing: .08em;
+      line-height: 1;
+    }
+
+    .shield {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(141, 224, 44, .38);
+      border-radius: 50%;
+      background: #000;
+      box-shadow: 0 0 28px rgba(141, 224, 44, .18);
+      overflow: hidden;
+    }
+
+    .shield img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      color: var(--text);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .links a {
+      padding: 8px 0;
+      opacity: .86;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover {
+      color: var(--green-hot);
+      border-color: var(--green);
+    }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 22px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 6px;
+      background: rgba(4, 10, 5, .78);
+      color: var(--text);
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 34px rgba(0,0,0,.28);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--green);
+    }
+
+    .btn-primary {
+      border-color: rgba(141, 224, 44, .95);
+      background: linear-gradient(180deg, var(--green-hot), var(--green));
+      color: #071006;
+    }
+
+    .hero {
+      min-height: calc(100svh - 76px);
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(141, 224, 44, .28);
+      background:
+        linear-gradient(90deg, rgba(3,6,3,.97) 0%, rgba(3,6,3,.78) 44%, rgba(3,6,3,.3) 100%),
+        var(--hero-image) center 18% / cover no-repeat;
+    }
+
+    .hero::after,
+    .footer::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(3,6,3,.12), rgba(3,6,3,.88));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(320px, 1.08fr);
+      gap: 34px;
+      align-items: center;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 84px 0;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .hero-badge {
+      width: clamp(92px, 13vw, 142px);
+      aspect-ratio: 1;
+      margin-bottom: 18px;
+      border: 1px solid rgba(141, 224, 44, .38);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(141, 224, 44, .15), transparent 68%),
+        #000 var(--logo) center / cover no-repeat;
+      box-shadow: 0 0 42px rgba(141, 224, 44, .18);
+    }
+
+    .mascot-panel {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      align-items: end;
+      justify-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(141, 224, 44, .28);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 50% 34%, rgba(141, 224, 44, .22), transparent 44%),
+        linear-gradient(180deg, rgba(3, 6, 3, .08), rgba(3, 6, 3, .7)),
+        var(--mascot) center bottom / cover no-repeat;
+      box-shadow: 0 28px 90px rgba(0,0,0,.42), inset 0 0 55px rgba(141,224,44,.08);
+    }
+
+    .mascot-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(3,6,3,.9));
+      pointer-events: none;
+    }
+
+    .mascot-caption {
+      position: relative;
+      z-index: 1;
+      width: min(92%, 520px);
+      margin: 0 0 22px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 213, 106, .34);
+      border-radius: 10px;
+      background: rgba(3, 6, 3, .76);
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .mascot-caption strong {
+      display: block;
+      color: var(--green-hot);
+      font-size: .82rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--gold);
+      font-size: .86rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1,
+    .display,
+    .logo-word {
+      font-family: "Changa One", Inter, sans-serif;
+      letter-spacing: .045em;
+      line-height: .88;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      color: var(--green);
+      font-size: clamp(5.5rem, 15vw, 11rem);
+      text-shadow: 0 8px 0 rgba(0,0,0,.64), 0 0 36px rgba(141,224,44,.14);
+    }
+
+    .hero-line {
+      max-width: 640px;
+      margin: 0 0 24px;
+      font-size: clamp(1.75rem, 4.4vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.06;
+      text-transform: uppercase;
+    }
+
+    .hero-line span { color: var(--green-hot); }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+      color: var(--gold);
+      font-size: .94rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .values span:nth-child(2) { color: var(--green-hot); }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    section {
+      padding: 72px 0;
+      border-bottom: 1px solid rgba(141, 224, 44, .2);
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 34px;
+      color: var(--green);
+      font-family: "Changa One", Inter, sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      letter-spacing: .08em;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .title::before,
+    .title::after {
+      content: "";
+      width: min(120px, 16vw);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+    }
+
+    .join {
+      background:
+        linear-gradient(90deg, rgba(3,6,3,.94), rgba(3,6,3,.68), rgba(3,6,3,.92)),
+        var(--image) center 34% / cover no-repeat;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card,
+    .phase,
+    details,
+    .security-item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background:
+        linear-gradient(180deg, var(--panel-2), rgba(2, 7, 4, .92)),
+        radial-gradient(circle at 50% 0, rgba(141, 224, 44, .12), transparent 60%);
+      box-shadow: 0 22px 55px rgba(0,0,0,.34);
+      backdrop-filter: blur(4px);
+    }
+
+    .panel {
+      padding: 32px;
+    }
+
+    .panel h2 {
+      margin-bottom: 16px;
+      color: var(--green);
+      font-family: "Changa One", Inter, sans-serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      letter-spacing: .06em;
+      line-height: .95;
+      text-transform: uppercase;
+    }
+
+    .panel p,
+    .card p,
+    .phase p,
+    details p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .legend-card {
+      max-width: 520px;
+      padding: 32px;
+      border-left: 4px solid var(--green);
+      background: rgba(3, 6, 3, .64);
+    }
+
+    .legend-card strong { color: var(--green-hot); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+
+    .card::before {
+      content: attr(data-mark);
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(141,224,44,.36);
+      border-radius: 50%;
+      background: rgba(141, 224, 44, .09);
+      color: var(--gold);
+      font-size: 1.45rem;
+      font-weight: 900;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--hero-image) center / 820px auto no-repeat;
+      opacity: .14;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .card h3,
+    .card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h3,
+    .phase h3 {
+      color: var(--green);
+      font-size: 1.08rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .facts,
+    .official {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .facts li,
+    .official a {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 17px 0;
+      border-bottom: 1px solid rgba(141,224,44,.18);
+      color: var(--muted);
+    }
+
+    .facts li:last-child,
+    .official li:last-child a { border-bottom: 0; }
+
+    .facts strong,
+    .official strong {
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    .official a:hover span,
+    .official a:hover strong { color: var(--green-hot); }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .countdown-grid,
+    .steps-grid,
+    .social-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .countdown-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .count-box {
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold-line);
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 50% 0, rgba(255, 213, 106, .14), transparent 60%),
+        rgba(5, 12, 7, .86);
+      text-align: center;
+      box-shadow: 0 22px 55px rgba(0,0,0,.28);
+    }
+
+    .count-box strong {
+      display: block;
+      color: var(--green-hot);
+      font-family: "Changa One", Inter, sans-serif;
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      letter-spacing: .05em;
+      line-height: .9;
+    }
+
+    .count-box span {
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .steps-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .step-card {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background:
+        linear-gradient(180deg, rgba(11,24,12,.92), rgba(3, 8, 4, .92)),
+        radial-gradient(circle at 50% 0, rgba(141,224,44,.11), transparent 58%);
+      box-shadow: 0 22px 55px rgba(0,0,0,.32);
+    }
+
+    .step-card .num {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 213, 106, .42);
+      border-radius: 50%;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .step-card h3 {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .social-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .social-card {
+      min-height: 92px;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      border: 1px solid rgba(141, 224, 44, .28);
+      border-radius: 10px;
+      background: rgba(5, 12, 7, .78);
+      color: var(--green-hot);
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .social-card small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .68rem;
+      letter-spacing: .08em;
+    }
+
+    .security-item {
+      min-height: 160px;
+      padding: 24px 18px;
+      border-color: var(--gold-line);
+      text-align: center;
+    }
+
+    .security-item span {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green-hot);
+      font-size: 2.25rem;
+      font-weight: 900;
+    }
+
+    .security-item strong {
+      display: block;
+      color: var(--green);
+      font-size: .9rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .roadmap {
+      background:
+        linear-gradient(180deg, rgba(3,6,3,.9), rgba(3,6,3,.96)),
+        var(--image) center 68% / cover no-repeat;
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      counter-reset: phase;
+    }
+
+    .phase {
+      min-height: 210px;
+      padding: 24px;
+    }
+
+    .phase::before {
+      counter-increment: phase;
+      content: "PHASE 0" counter(phase);
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 22px;
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    details p { padding: 0 22px 22px; }
+
+    .footer {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 36px;
+      background:
+        linear-gradient(90deg, rgba(3,6,3,.68), rgba(3,6,3,.74)),
+        var(--image) center bottom / cover no-repeat;
+      text-align: center;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer h2 {
+      margin-bottom: 18px;
+      font-size: clamp(1.75rem, 5vw, 3.15rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .footer h2 span { color: var(--green-hot); }
+
+    .logo-word {
+      margin-bottom: 14px;
+      color: var(--green);
+      font-size: clamp(3rem, 10vw, 6rem);
+      text-shadow: 0 8px 0 rgba(0,0,0,.48);
+    }
+
+    .footer-mark {
+      width: 88px;
+      aspect-ratio: 1;
+      margin: 0 auto 14px;
+      border: 1px solid rgba(141, 224, 44, .38);
+      border-radius: 50%;
+      background: #000 var(--logo) center / cover no-repeat;
+      box-shadow: 0 0 34px rgba(141, 224, 44, .2);
+    }
+
+    .fineprint {
+      max-width: 760px;
+      margin: 30px auto 22px;
+      color: #92a08e;
+      font-size: .8rem;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid rgba(141,224,44,.18);
+      padding-top: 22px;
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 980px) {
+      .links { display: none; }
+      .hero { background-position: 58% top; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .mascot-panel { min-height: 560px; }
+      .split { grid-template-columns: 1fr; }
+      .grid,
+      .countdown-grid,
+      .steps-grid,
+      .social-grid,
+      .security-grid,
+      .roadmap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1180px); }
+      .nav-inner { min-height: 66px; }
+      .brand { font-size: 1.8rem; }
+      .shield { width: 38px; height: 38px; }
+      .nav .btn { display: none; }
+      .hero {
+        min-height: auto;
+        background-position: 62% top;
+      }
+      .hero-grid { padding: 64px 0; width: min(100% - 24px, 1180px); }
+      .mascot-panel { min-height: 480px; border-radius: 14px; }
+      h1 { font-size: clamp(4.8rem, 25vw, 7rem); }
+      .hero-line { font-size: clamp(1.65rem, 8vw, 2.5rem); }
+      .btn { width: 100%; }
+      section { padding: 58px 0; }
+      .title { gap: 10px; }
+      .title::before,
+      .title::after { width: 34px; }
+      .grid,
+      .countdown-grid,
+      .steps-grid,
+      .social-grid,
+      .security-grid,
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .facts li,
+      .official a,
+      .copyright {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .copyright { align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="DinoDoxa home">
+        <span class="shield"><img src="file:///C:/Users/Account/Downloads/WhatsApp%20Image%202026-06-15%20at%2013.23.35.jpeg" alt="DinoDoxa logo"></span>
+        <span>DOXA</span>
+      </a>
+      <nav class="links" aria-label="Primary navigation">
+        <a href="#top">Home</a>
+        <a href="#legend">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#launch">Launch</a>
+        <a href="#buy">Buy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#why">Kingdom</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Join The Kingdom</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge" aria-hidden="true"></div>
+          <p class="eyebrow">The Kingdom of Doxa</p>
+          <h1 id="hero-title">DOXA</h1>
+          <p class="hero-line">The last dinosaur who built a kingdom <span>on Solana</span></p>
+          <div class="values" aria-label="Doxa values">
+            <span>Unity</span>
+            <span>Growth</span>
+            <span>Glory</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Join The Kingdom</a>
+            <a class="btn" href="#buy">How To Buy</a>
+            <a class="btn" href="#official-links">Official Links</a>
+          </div>
+        </div>
+        <div class="mascot-panel" role="img" aria-label="DinoDoxa King mascot holding a glowing DOXA shield">
+          <p class="mascot-caption"><strong>DinoDoxa King</strong> Cute, heroic, neon green, crowned, and built to carry the DOXA identity across web, socials, stickers, GIFs, and memes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="join" aria-labelledby="join-title">
+      <div class="wrap split">
+        <div class="panel">
+          <h2 id="join-title">Join The Kingdom</h2>
+          <p>DinoDoxa is a culture-led Solana community built around a royal meme identity, strong visual energy, and long-term holder participation.</p>
+        </div>
+        <div class="panel">
+          <p>The kingdom grows through raids, memes, announcements, creator content, and loyal citizens who keep the legend alive.</p>
+          <div class="actions" style="margin-top: 26px;">
+            <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Community</a>
+            <a class="btn" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Announcements</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legend" aria-labelledby="legend-title">
+      <div class="wrap">
+        <div class="legend-card">
+          <h2 class="display" id="legend-title">The Legend Begins</h2>
+          <p>Millions of years after extinction, one dinosaur survived. His name was <strong>DinoDoxa</strong>. He discovered Solana and began rebuilding the lost Kingdom of Doxa.</p>
+          <p><strong>This is not just a story. This is our future.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <h2 class="title" id="why-title">Why DOXA</h2>
+        <div class="grid">
+          <article class="card" data-mark="✓">
+            <h3>Built on Solana</h3>
+            <p>Fast, low-cost, and ready for a high-energy meme coin community.</p>
+          </article>
+          <article class="card" data-mark="✓">
+            <h3>Community Driven</h3>
+            <p>The kingdom grows through holders, creators, memes, raids, and conviction.</p>
+          </article>
+          <article class="card" data-mark="✓">
+            <h3>Mint Revoked</h3>
+            <p>A cleaner supply narrative built around stronger community confidence.</p>
+          </article>
+          <article class="card" data-mark="✓">
+            <h3>LP Locked</h3>
+            <p>Liquidity protection is part of DOXA's premium trust positioning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokenomics" aria-labelledby="tokenomics-title">
+      <div class="wrap split">
+        <div class="panel">
+          <h2 id="tokenomics-title">Tokenomics</h2>
+          <p>DOXA keeps token information focused on verified fundamentals. Live market data and contract details should only appear when confirmed through official sources.</p>
+        </div>
+        <div class="panel">
+          <ul class="facts" aria-label="Tokenomics facts">
+            <li><strong>Network</strong><span>Solana</span></li>
+            <li><strong>Mint Authority</strong><span>Revoked</span></li>
+            <li><strong>Liquidity</strong><span>Locked</span></li>
+            <li><strong>Primary Focus</strong><span>Community Growth</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" aria-labelledby="security-title">
+      <div class="wrap">
+        <h2 class="title" id="security-title">Security</h2>
+        <div class="security-grid">
+          <div class="security-item"><span>✓</span><strong>Mint Revoked</strong></div>
+          <div class="security-item"><span>◆</span><strong>Clean Claims</strong></div>
+          <div class="security-item"><span>▣</span><strong>LP Locked</strong></div>
+          <div class="security-item"><span>◎</span><strong>Official Channels</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="launch" aria-labelledby="launch-title">
+      <div class="wrap">
+        <h2 class="title" id="launch-title">Launch Countdown</h2>
+        <div class="countdown-grid" aria-label="Launch countdown">
+          <div class="count-box"><div><strong>TBA</strong><span>Days</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Hours</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Minutes</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Seconds</span></div></div>
+        </div>
+        <p class="fineprint">Official launch timing will be announced only through the DinoDoxa Telegram channels.</p>
+      </div>
+    </section>
+
+    <section id="buy" aria-labelledby="buy-title">
+      <div class="wrap">
+        <h2 class="title" id="buy-title">Buy DOXA</h2>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="num">1</span>
+            <h3>Phantom Wallet</h3>
+            <p>Install Phantom or another Solana wallet and keep your recovery phrase private.</p>
+          </article>
+          <article class="step-card">
+            <span class="num">2</span>
+            <h3>Buy SOL</h3>
+            <p>Add SOL to your wallet for swapping and Solana network fees.</p>
+          </article>
+          <article class="step-card">
+            <span class="num">3</span>
+            <h3>Swap on Jupiter</h3>
+            <p>Use verified token information only when the official contract is publicly confirmed.</p>
+          </article>
+          <article class="step-card">
+            <span class="num">4</span>
+            <h3>Join DOXA Kingdom</h3>
+            <p>Enter the community, follow announcements, and help grow the kingdom.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap" aria-labelledby="roadmap-title">
+      <div class="wrap">
+        <h2 class="title" id="roadmap-title">Roadmap</h2>
+        <div class="roadmap-grid">
+          <article class="phase">
+            <h3>The Awakening</h3>
+            <p>Community building, website launch, official channels, and first citizens.</p>
+          </article>
+          <article class="phase">
+            <h3>The Kingdom Rises</h3>
+            <p>Token launch, liquidity protection, holder growth, and public awareness.</p>
+          </article>
+          <article class="phase">
+            <h3>The Expansion</h3>
+            <p>Partnerships, marketing campaigns, community events, and global presence.</p>
+          </article>
+          <article class="phase">
+            <h3>The Eternal Flame</h3>
+            <p>Long-term community rituals, project updates, and durable kingdom identity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="official-links" aria-labelledby="official-title">
+      <div class="wrap split">
+        <div class="panel">
+          <h2 id="official-title">Official Links</h2>
+          <p>Use only the official DOXA links below for community, announcements, contact, and website access.</p>
+        </div>
+        <div class="panel">
+          <ul class="official" aria-label="Official DinoDoxa links">
+            <li><a href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener"><strong>Telegram Community</strong><span>t.me/kingdomofdoxa</span></a></li>
+            <li><a href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener"><strong>Telegram Announcements</strong><span>t.me/DinoDoxaOfficial</span></a></li>
+            <li><a href="mailto:hello@dinodoxa.com"><strong>Email</strong><span>hello@dinodoxa.com</span></a></li>
+            <li><a href="https://dinodoxa.com" target="_blank" rel="noopener"><strong>Website</strong><span>dinodoxa.com</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="socials" aria-labelledby="socials-title">
+      <div class="wrap">
+        <h2 class="title" id="socials-title">Social Links</h2>
+        <div class="social-grid" aria-label="DinoDoxa social links">
+          <a class="social-card" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Telegram<small>Community</small></a>
+          <a class="social-card" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Telegram<small>Announcements</small></a>
+          <span class="social-card">X<small>Coming Soon</small></span>
+          <span class="social-card">Dexscreener<small>Coming Soon</small></span>
+          <span class="social-card">Birdeye<small>Coming Soon</small></span>
+          <span class="social-card">Jupiter<small>Coming Soon</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 class="title" id="faq-title">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>What is DinoDoxa?</summary>
+            <p>DinoDoxa is a Solana meme coin built around the Kingdom of Doxa, a community-driven crypto identity.</p>
+          </details>
+          <details>
+            <summary>Where can I join the kingdom?</summary>
+            <p>Join the Telegram Community at https://t.me/kingdomofdoxa and follow announcements at https://t.me/DinoDoxaOfficial.</p>
+          </details>
+          <details>
+            <summary>Why is there no live price or market cap?</summary>
+            <p>Market information should come from verified live sources only, so this page avoids simulated or unverified market data.</p>
+          </details>
+          <details>
+            <summary>Is this financial advice?</summary>
+            <p>No. DOXA is a meme coin community project. Crypto assets are volatile, so always do your own research.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-content">
+      <h2>One Dino. One Mission. <span>One Kingdom.</span></h2>
+      <div class="footer-mark" aria-hidden="true"></div>
+      <div class="logo-word">DOXA</div>
+      <div class="values" style="justify-content:center;">
+        <span>Unity</span>
+        <span>Growth</span>
+        <span>Glory</span>
+      </div>
+      <div class="actions" style="justify-content:center;">
+        <a class="btn" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Announcements</a>
+        <a class="btn btn-primary" href="https://dinodoxa.com" target="_blank" rel="noopener">Website</a>
+        <a class="btn" href="mailto:hello@dinodoxa.com">Email</a>
+      </div>
+      <div class="social-grid" style="margin-top: 18px;">
+        <span class="social-card">X<small>Coming Soon</small></span>
+        <span class="social-card">Dexscreener<small>Coming Soon</small></span>
+        <span class="social-card">Birdeye<small>Coming Soon</small></span>
+        <span class="social-card">Raydium<small>Coming Soon</small></span>
+        <span class="social-card">Jupiter<small>Coming Soon</small></span>
+        <a class="social-card" href="mailto:hello@dinodoxa.com">Email<small>Contact</small></a>
+      </div>
+      <p class="fineprint">Disclaimer: DOXA is a community-driven meme coin created for informational and entertainment purposes only. Crypto assets carry volatility and risk.</p>
+      <div class="copyright">
+        <span>&copy; 2026 DOXA. All rights reserved.</span>
+        <span>Built on Solana</span>
+        <span>Founded by the first citizen.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
