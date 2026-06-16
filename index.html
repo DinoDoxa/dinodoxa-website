@@ -837,9 +837,23 @@
           <p class="hero-line">The last dinosaur who built a kingdom <span>on Solana</span>
           </p>
           
-          <div class="contract-box">
+<div class="contract-box">
   <p><strong>Contract Address</strong></p>
-  <code>F4fzoSvJAQ4E7qg83VRcfSGKsi82Z3gs2otF2JgKPzTx</code>
+
+  <input
+    type="text"
+    id="contractAddress"
+    value="F4fzoSvJAQ4E7qg83VRcfSGKsi82Z3gs2otF2JgKPzTx"
+    readonly
+    style="width:100%;padding:10px;border-radius:8px;"
+  >
+
+  <button
+    onclick="copyContract()"
+    style="margin-top:10px;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;"
+  >
+    Copy Contract
+  </button>
 </div>
           <div class="values" aria-label="Doxa values">
             <span>Unity</span>
@@ -1090,5 +1104,15 @@
       </div>
     </div>
   </footer>
+
+  <script>
+function copyContract() {
+  const contract = document.getElementById("contractAddress");
+  navigator.clipboard.writeText(contract.value);
+  alert("Contract Address berhasil disalin!");
+}
+</script>
+
+  
 </body>
 </html>
