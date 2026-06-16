@@ -1127,7 +1127,14 @@ font-weight:700;
 function copyContract() {
   const contract = document.getElementById("contractAddress");
   navigator.clipboard.writeText(contract.value);
-  alert("Contract Address berhasil disalin!");
+
+  const btn = document.querySelector('button[onclick="copyContract()"]');
+  btn.innerText = "✓ COPIED";
+
+  setTimeout(() => {
+    btn.innerText = "COPY CA";
+  }, 2000);
+}
 }
 </script>
 
