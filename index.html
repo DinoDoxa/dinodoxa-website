@@ -823,6 +823,19 @@ justify-content: center;
       }
       .copyright { align-items: stretch; }
     }
+  /* ===== TOKENOMICS CHART ===== */
+
+#tokenChart{
+    filter: drop-shadow(0 0 12px rgba(141,224,44,.45))
+            drop-shadow(0 0 28px rgba(141,224,44,.20));
+    transition: all .35s ease;
+}
+
+#tokenChart:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 20px rgba(141,224,44,.75))
+            drop-shadow(0 0 42px rgba(141,224,44,.35));
+}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
