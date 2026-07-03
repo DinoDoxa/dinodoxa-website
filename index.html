@@ -824,6 +824,7 @@ justify-content: center;
       .copyright { align-items: stretch; }
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header class="nav">
@@ -996,7 +997,10 @@ Every allocation has a clear purpose in strengthening the Kingdom of Doxa and su
 <br>
 
 <p><strong>👑 Kingdom Allocation</strong></p>
-
+          
+<div style="max-width:360px;margin:25px auto;">
+    <canvas id="tokenChart"></canvas>
+</div>
 <ul>
 <li><strong>💧 Liquidity</strong> — 40% (400,000,000 DOXA)</li>
 <li><strong>🎁 Community</strong> — 20% (200,000,000 DOXA)</li>
@@ -1217,7 +1221,48 @@ function copyContract() {
   }, 2000);
 }
 </script>
+<script>
+const ctx = document.getElementById('tokenChart');
 
+if (ctx) {
+    new Chart(ctx,{
+        type:'doughnut',
+        data:{
+            labels:[
+                'Liquidity',
+                'Community',
+                'Marketing',
+                'Treasury',
+                'Strategic Reserve'
+            ],
+            datasets:[{
+                data:[40,20,10,15,15],
+                backgroundColor:[
+                    '#8de02c',
+                    '#46ff92',
+                    '#ffd84d',
+                    '#3fa7ff',
+                    '#ff8c42'
+                ],
+                borderColor:'#071007',
+                borderWidth:4
+            }]
+        },
+        options:{
+            responsive:true,
+            cutout:'62%',
+            plugins:{
+                legend:{
+                    position:'bottom',
+                    labels:{
+                        color:'#ffffff'
+                    }
+                }
+            }
+        }
+    });
+}
+</script>
   
 </body>
 </html>
