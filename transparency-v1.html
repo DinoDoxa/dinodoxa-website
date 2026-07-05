@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transparency Center | DinoDoxa</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--green:#8de02c;
+--bg:#050805;
+--glass:rgba(20,30,20,.55);
+--border:rgba(141,224,44,.18);
+
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:var(--bg);
+font-family:Arial,Helvetica,sans-serif;
+color:#fff;
+overflow-x:hidden;
+
+}
+
+.container{
+
+width:92%;
+max-width:1250px;
+margin:auto;
+
+}
+
+/*=========================
+ HERO
+=========================*/
+
+.hero{
+
+padding:110px 20px 80px;
+
+text-align:center;
+
+background:
+radial-gradient(circle at top,
+rgba(141,224,44,.10),
+transparent 60%);
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+color:var(--green);
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#d7d7d7;
+
+}
+
+/*=========================
+ STATUS
+=========================*/
+
+.status{
+
+padding:20px 0 80px;
+
+}
+
+.status-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.status-card{
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+padding:28px;
+
+text-align:center;
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.status-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--green);
+
+box-shadow:0 15px 35px rgba(141,224,44,.15);
+
+}
+
+.status-card h3{
+
+color:var(--green);
+
+margin-bottom:15px;
+
+font-size:20px;
+
+}
+
+.status-card span{
+
+font-size:28px;
+
+font-weight:bold;
+
+}
+/*====================================
+  WALLET SECTION
+====================================*/
+
+.wallet-section{
+
+padding:30px 0 100px;
+
+}
+
+.wallet-title{
+
+text-align:center;
+
+font-size:42px;
+
+color:var(--green);
+
+margin-bottom:50px;
+
+}
+
+.wallet-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+gap:30px;
+
+}
+
+.wallet-card{
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:30px;
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.wallet-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--green);
+
+box-shadow:0 20px 40px rgba(141,224,44,.18);
+
+}
+
+.wallet-card h3{
+
+color:var(--green);
+
+font-size:24px;
+
+margin-bottom:18px;
+
+}
+
+.wallet-percent{
+
+font-size:42px;
+
+font-weight:bold;
+
+color:var(--green);
+
+margin-bottom:25px;
+
+}
+
+.wallet-card p{
+
+margin:8px 0;
+
+line-height:1.7;
+
+color:#d7d7d7;
+
+}
+
+.wallet-card strong{
+
+color:white;
+
+}
+/*==================================
+ADDRESS
+==================================*/
+
+.wallet-address{
+
+margin-top:25px;
+
+padding:15px;
+
+background:#081108;
+
+border-radius:12px;
+
+font-size:13px;
+
+word-break:break-all;
+
+color:#9cff65;
+
+border:1px solid rgba(141,224,44,.15);
+
+}
+
+.wallet-buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+.wallet-btn{
+
+flex:1;
+
+text-align:center;
+
+padding:12px;
+
+border-radius:12px;
+
+background:var(--green);
+
+color:#071007;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.wallet-btn:hover{
+
+transform:translateY(-3px);
+
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>🏛 Transparency Center</h1>
+
+<p>
+
+Every official DinoDoxa wallet is publicly disclosed
+and can be independently verified on the Solana blockchain.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="status">
+
+<div class="container">
+
+<div class="status-grid">
+
+<div class="status-card">
+
+<h3>Official Wallets</h3>
+
+<span>5</span>
+
+</div>
+
+<div class="status-card">
+
+<h3>Total Supply</h3>
+
+<span>1 Billion DOXA</span>
+
+</div>
+
+<div class="status-card">
+
+<h3>Allocation</h3>
+
+<span>100%</span>
+
+</div>
+
+<div class="status-card">
+
+<h3>Blockchain</h3>
+
+<span>Solana</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="wallet-section">
+
+<div class="container">
+
+<h2 class="wallet-title">
+
+Official Wallet Registry
+
+</h2>
+
+<div class="wallet-grid">
+
+<article class="wallet-card">
+
+<h3>💧 Liquidity Wallet</h3>
+
+<div class="wallet-percent">40%</div>
+
+<p><strong>Purpose</strong></p>
+
+<p>Initial Liquidity Pool</p>
+
+<p><strong>Status</strong></p>
+
+<p>LP Ready</p>
+
+</article>
+
+<article class="wallet-card">
+
+<h3>🎁 Community Wallet</h3>
+
+<div class="wallet-percent">20%</div>
+
+<p><strong>Purpose</strong></p>
+
+<p>Community Growth</p>
+
+<p><strong>Status</strong></p>
+
+<p>Active</p>
+
+</article>
+
+<article class="wallet-card">
+
+<h3>📢 Marketing Wallet</h3>
+
+<div class="wallet-percent">10%</div>
+
+<p><strong>Purpose</strong></p>
+
+<p>Marketing Campaign</p>
+
+<p><strong>Status</strong></p>
+
+<p>Active</p>
+
+</article>
+
+<article class="wallet-card">
+
+<h3>🏛 Treasury Wallet</h3>
+
+<div class="wallet-percent">15%</div>
+
+<p><strong>Purpose</strong></p>
+
+<p>Development Fund</p>
+
+<p><strong>Status</strong></p>
+
+<p>Protected</p>
+
+</article>
+
+<article class="wallet-card">
+
+<h3>📦 Strategic Reserve</h3>
+
+<div class="wallet-percent">15%</div>
+
+<p><strong>Purpose</strong></p>
+
+<p>Future Expansion</p>
+
+<p><strong>Status</strong></p>
+
+<p>Reserved</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+</body>
+</html>

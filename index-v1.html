@@ -47,25 +47,26 @@
       line-height: 1.55;
     }
 
-   body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-2;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: var(--image) center top / cover no-repeat;
+      opacity: .16;
+      filter: saturate(1.15);
+    }
 
-    background:var(--image) center top / cover no-repeat;
-
-    opacity:.28;
-
-    filter:
-        brightness(.95)
-        contrast(1.12)
-        saturate(1.35);
-
-    transform:scale(1.02);
-}
-
-   
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(3,6,3,.97), rgba(3,6,3,.74), rgba(3,6,3,.95)),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.024) 0 1px, transparent 1px 5px);
+    }
 
     a { color: inherit; text-decoration: none; }
     h1, h2, h3, p { margin-top: 0; }
@@ -835,125 +836,6 @@ justify-content: center;
     filter: drop-shadow(0 0 20px rgba(141,224,44,.75))
             drop-shadow(0 0 42px rgba(141,224,44,.35));
 }
-#tokenChart:hover{
-    transform:scale(1.03);
-    filter:
-        drop-shadow(0 0 20px rgba(141,224,44,.75))
-        drop-shadow(0 0 42px rgba(141,224,44,.35));
-}
-
-/* ============================
-   TRANSPARENCY CENTER
-============================ */
-
-.transparency-box{
-    margin:60px 0;
-    padding:40px;
-    border:1px solid rgba(141,224,44,.25);
-    border-radius:22px;
-    background:linear-gradient(180deg,rgba(5,10,5,.82),rgba(3,6,3,.72));
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 40px rgba(0,0,0,.45);
-}
-
-.transparency-box h2{
-    color:var(--green);
-    margin-bottom:15px;
-}
-
-.transparency-box p{
-    color:var(--muted);
-}
-
-.transparency-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
-    margin-top:35px;
-}
-
-.transparency-card{
-    padding:24px;
-    border-radius:18px;
-    border:1px solid rgba(141,224,44,.15);
-    background:rgba(255,255,255,.03);
-    transition:.3s;
-}
-
-.transparency-card:hover{
-    transform:translateY(-6px);
-    border-color:var(--green);
-    background:rgba(141,224,44,.06);
-}
-
-.transparency-card h3{
-    color:var(--green-hot);
-    margin-bottom:10px;
-}
-
-.transparency-card a{
-    color:var(--gold);
-    font-weight:700;
-}
-.wallet-status{
-    display:inline-block;
-    margin:10px 0 16px;
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:.72rem;
-    font-weight:800;
-    letter-spacing:.08em;
-}
-
-.wallet-status.locked{
-    color:#8de02c;
-    background:rgba(141,224,44,.12);
-    border:1px solid rgba(141,224,44,.30);
-}
-
-.wallet-status.public{
-    color:#66d9ff;
-    background:rgba(102,217,255,.12);
-    border:1px solid rgba(102,217,255,.30);
-}
-
-.wallet-status.reserve{
-    color:#ffd56a;
-    background:rgba(255,213,106,.12);
-    border:1px solid rgba(255,213,106,.30);
-}
-/* ===== LIQUIDITY POOL PANEL ===== */
-
-.lp-box{
-    margin-top:28px;
-    padding:26px;
-    border:1px solid var(--line);
-    border-radius:18px;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(6,14,7,.92),
-            rgba(2,7,4,.86)
-        );
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.35);
-
-    backdrop-filter:blur(8px);
-}
-
-.lp-box h3{
-    margin:0 0 12px;
-    color:var(--green-hot);
-    font-size:1.25rem;
-}
-
-.lp-box p{
-    color:var(--muted);
-    line-height:1.7;
-    margin-bottom:18px;
-}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -1146,49 +1028,22 @@ Every allocation has a clear purpose in strengthening the Kingdom of Doxa and su
 
 </div>
         <div class="panel">
-    <h2>💧 LIQUIDITY POOL</h2>
+        <ul class="facts" aria-label="Tokenomics facts">
+<li><strong>Network</strong><span>Solana</span></li>
+<li><strong>Total Supply</strong><span>1,000,000,000</span></li>
+<li><strong>Mint Authority</strong><span>Revoked</span></li>
+<li><strong>LP Allocation</strong><span>40%</span></li>
 
-<p>
-Built to Last.<br>
-Locked for Trust.
-</p>
+<li><strong>Initial LP</strong><span>20 SOL</span></li>
 
-<br>
+<li><strong>Marketing</strong><span>10%</span></li>
 
-<p>
-Our liquidity is permanently locked to
-protect every Citizen of Doxa and ensure
-a stable future for the Kingdom.
-</p>
-<div class="lp-grid">
+<li><strong>Treasury</strong><span>15%</span></li>
 
-  <div class="lp-card">
-    <small>LP Allocation</small>
-    <h3>40%</h3>
-    <p>400,000,000 DOXA</p>
-  </div>
-<a href="#" class="lp-button">
-    🔒 View Lock on PinkLock →
-</a>
-  <div class="lp-card">
-    <small>Initial Liquidity</small>
-    <h3>20 SOL</h3>
-    <p>On Solana</p>
-  </div>
+<li><strong>Community</strong><span>20%</span></li>
 
-  <div class="lp-card">
-    <small>Lock Status</small>
-    <h3>🔒 LOCKED</h3>
-    <p>Locked Forever</p>
-  </div>
-
-  <div class="lp-card">
-    <small>Locker</small>
-    <h3>PinkLock</h3>
-    <p>Third-party verified</p>
-  </div>
-
-</div> 
+<li><strong>Strategic Reserve</strong><span>15%</span></li>
+</ul> 
         </div>
       </div>
     </section>
@@ -1209,21 +1064,10 @@ a stable future for the Kingdom.
       <div class="wrap">
         <h2 class="title" id="launch-title">Launch Countdown</h2>
         <div class="countdown-grid" aria-label="Launch countdown">
-         <div class="count-box">
-  <div><strong id="days">00</strong><span>Days</span></div>
-</div>
-
-<div class="count-box">
-  <div><strong id="hours">00</strong><span>Hours</span></div>
-</div>
-
-<div class="count-box">
-  <div><strong id="minutes">00</strong><span>Minutes</span></div>
-</div>
-
-<div class="count-box">
-  <div><strong id="seconds">00</strong><span>Seconds</span></div>
-</div>
+          <div class="count-box"><div><strong>TBA</strong><span>Days</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Hours</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Minutes</span></div></div>
+          <div class="count-box"><div><strong>TBA</strong><span>Seconds</span></div></div>
         </div>
         <p class="fineprint">Official launch timing will be announced only through the DinoDoxa Telegram channels.</p>
       </div>
@@ -1256,115 +1100,7 @@ a stable future for the Kingdom.
         </div>
       </div>
     </section>
-<section id="transparency">
 
-  <div class="wrap">
-
-    <div class="transparency-box">
-
-      <h2>TRANSPARENCY CENTER</h2>
-
-      <p>
-        Every important on-chain asset of the Kingdom is publicly visible and verifiable.
-      </p>
-
-      <div class="transparency-grid">
-
-       <div class="transparency-card">
-
-<h3>👑 Community Wallet</h3>
-
-<span class="wallet-status public">PUBLIC</span>
-
-<p>
-
-<strong>Allocation:</strong> 20%<br>
-
-F7N3...34L1
-
-</p>
-
-<a href="https://solscan.io/account/F7N3GN6nZErfZ1AXZBZ5XTew9zB8NvAEXzZRBbRc34L1" target="_blank">
-
-View on Solscan →
-
-</a>
-
-</div>
-
-     <div class="transparency-card">
-
-<h3>🏦 Treasury Wallet</h3>
-
-<span class="wallet-status public">PUBLIC</span>
-
-<p>
-
-<strong>Allocation:</strong> 15%<br>
-
-4zzf...yEH8
-
-</p>
-
-<a href="https://solscan.io/account/4zzf4q4DaKbov72Y6hrmDY6QJTLFMGdpa3NC3P2VyEH8" target="_blank">
-
-View on Solscan →
-
-</a>
-
-</div>
-
-      <div class="transparency-card">
-
-<h3>📢 Marketing Wallet</h3>
-
-<span class="wallet-status public">PUBLIC</span>
-
-<p>
-
-<strong>Allocation:</strong> 10%<br>
-
-5ESH...wS4S
-
-</p>
-
-<a href="https://solscan.io/account/5ESHWwuyhEc5ph6Yv6ew5pNAVthi5a7R4TCbmgDUwS4S" target="_blank">
-
-View on Solscan →
-
-</a>
-
-</div>
-
-      <div class="transparency-card">
-
-<h3>🛡 Strategic Reserve</h3>
-
-<span class="wallet-status reserve">RESERVE</span>
-
-<p>
-
-<strong>Allocation:</strong> 15%<br>
-
-41jb...97e
-
-</p>
-
-<a href="https://solscan.io/account/41jbGBjfWKsG8bmL2QYzivT4RsuZWY3dQAwEwmrKi97e" target="_blank">
-
-View on Solscan →
-
-</a>
-
-</div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
     <section id="roadmap" class="roadmap" aria-labelledby="roadmap-title">
       <div class="wrap">
         <h2 class="title" id="roadmap-title">Roadmap</h2>
@@ -1412,13 +1148,7 @@ View on Solscan →
         <div class="social-grid" aria-label="DinoDoxa social links">
           <a class="social-card" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Telegram<small>Community</small></a>
           <a class="social-card" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Telegram<small>Announcements</small></a>
-          <a class="social-card"
-   href="https://x.com/dinodoxa"
-   target="_blank"
-   rel="noopener noreferrer">
-    𝕏 Official X
-    <small>@dinodoxa</small>
-</a>
+          <span class="social-card">X<small>Coming Soon</small></span>
           <span class="social-card">Dexscreener<small>Coming Soon</small></span>
           <span class="social-card">Birdeye<small>Coming Soon</small></span>
           <span class="social-card">Jupiter<small>Coming Soon</small></span>
@@ -1474,13 +1204,7 @@ View on Solscan →
         <a class="btn" href="mailto:hello@dinodoxa.com">Email</a>
       </div>
       <div class="social-grid" style="margin-top: 18px;">
-      <a class="social-card"
-   href="https://x.com/dinodoxa"
-   target="_blank"
-   rel="noopener noreferrer">
-    𝕏 Official X
-    <small>@dinodoxa</small>
-</a>
+        <span class="social-card">X<small>Coming Soon</small></span>
         <span class="social-card">Dexscreener<small>Coming Soon</small></span>
         <span class="social-card">Birdeye<small>Coming Soon</small></span>
         <span class="social-card">Raydium<small>Coming Soon</small></span>
@@ -1553,35 +1277,6 @@ options:{
     });
 }
 </script>
- <script>
-const launchDate = new Date("August 1, 2026 00:00:00").getTime();
-
-function updateCountdown(){
-
-    const now = new Date().getTime();
-    const distance = launchDate - now;
-
-    if(distance <= 0){
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-        return;
-    }
-
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-    document.getElementById("days").textContent = String(days).padStart(2,"0");
-    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
-}
-
-updateCountdown();
-setInterval(updateCountdown,1000);
-</script> 
+  
 </body>
 </html>
