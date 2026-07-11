@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DinoDoxa | The Last Dinosaur on Solana</title>
-  <meta name="description" content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
+  <meta name="description"
+    content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
   <meta name="theme-color" content="#030603">
   <meta property="og:title" content="DinoDoxa | The Last Dinosaur on Solana">
-  <meta property="og:description" content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
+  <meta property="og:description"
+    content="DinoDoxa is a Solana meme coin built around the Kingdom of Doxa. Community-driven, transparent, and focused on long-term growth.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dinodoxa.com">
   <link rel="canonical" href="https://dinodoxa.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inter:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg: #030603;
@@ -34,8 +38,13 @@
       color-scheme: dark;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -47,28 +56,35 @@
       line-height: 1.55;
     }
 
-   body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-2;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
 
-    background:var(--image) center top / cover no-repeat;
+      background: var(--image) center top / cover no-repeat;
 
-    opacity:.28;
+      opacity: .28;
 
-    filter:
-        brightness(.95)
-        contrast(1.12)
-        saturate(1.35);
+      filter:
+        brightness(.95) contrast(1.12) saturate(1.35);
 
-    transform:scale(1.02);
-}
+      transform: scale(1.02);
+    }
 
-   
 
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, p { margin-top: 0; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
 
     .wrap {
       width: min(1180px, calc(100% - 32px));
@@ -149,7 +165,7 @@
       justify-content: center;
       gap: 9px;
       padding: 0 22px;
-      border: 1px solid rgba(255,255,255,.24);
+      border: 1px solid rgba(255, 255, 255, .24);
       border-radius: 6px;
       background: rgba(4, 10, 5, .78);
       color: var(--text);
@@ -157,7 +173,7 @@
       font-weight: 900;
       letter-spacing: .04em;
       text-transform: uppercase;
-      box-shadow: 0 16px 34px rgba(0,0,0,.28);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, .28);
       transition: transform .18s ease, border-color .18s ease, background .18s ease;
     }
 
@@ -180,7 +196,7 @@
       overflow: hidden;
       border-bottom: 1px solid rgba(141, 224, 44, .28);
       background:
-        linear-gradient(90deg, rgba(3,6,3,.97) 0%, rgba(3,6,3,.78) 44%, rgba(3,6,3,.3) 100%),
+        linear-gradient(90deg, rgba(3, 6, 3, .97) 0%, rgba(3, 6, 3, .78) 44%, rgba(3, 6, 3, .3) 100%),
         var(--hero-image) center 18% / cover no-repeat;
     }
 
@@ -189,7 +205,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(3,6,3,.12), rgba(3,6,3,.88));
+      background: linear-gradient(180deg, rgba(3, 6, 3, .12), rgba(3, 6, 3, .88));
       pointer-events: none;
     }
 
@@ -209,20 +225,22 @@
       max-width: 680px;
     }
 
-      @keyframes floatLogo {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
+    @keyframes floatLogo {
+      0% {
+        transform: translateY(0px);
+      }
 
-.hero-badge {
-  animation: floatLogo 4s ease-in-out infinite;
+      50% {
+        transform: translateY(-8px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .hero-badge {
+      animation: floatLogo 4s ease-in-out infinite;
 
       width: clamp(92px, 13vw, 142px);
       aspect-ratio: 1;
@@ -230,10 +248,10 @@
       border: 1px solid rgba(141, 224, 44, .38);
       border-radius: 50%;
       overflow: hidden;
-padding: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background:
         radial-gradient(circle, rgba(141, 224, 44, .15), transparent 68%),
         #000 var(--logo) center / cover no-repeat;
@@ -246,8 +264,8 @@ justify-content: center;
       min-height: 620px;
 
       transition:
-    transform .45s ease,
-    box-shadow .45s ease;
+        transform .45s ease,
+        box-shadow .45s ease;
       display: grid;
       align-items: end;
       justify-items: center;
@@ -258,29 +276,31 @@ justify-content: center;
         radial-gradient(circle at 50% 34%, rgba(141, 224, 44, .22), transparent 44%),
         linear-gradient(180deg, rgba(3, 6, 3, .08), rgba(3, 6, 3, .7)),
         var(--mascot) center bottom / cover no-repeat;
-      box-shadow: 0 28px 90px rgba(0,0,0,.42), inset 0 0 55px rgba(141,224,44,.08);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, .42), inset 0 0 55px rgba(141, 224, 44, .08);
     }
-    .mascot-panel:hover{
 
-    transform:
-        translateY(-10px)
-        scale(1.02);
+    .mascot-panel:hover {
 
-    box-shadow:
-        0 25px 80px rgba(141,224,44,.25);
+      transform:
+        translateY(-10px) scale(1.02);
 
-}
-.mascot-panel img {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
+      box-shadow:
+        0 25px 80px rgba(141, 224, 44, .25);
+
+    }
+
+    .mascot-panel img {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
     .mascot-panel::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(3,6,3,.9));
+      background: linear-gradient(180deg, transparent 50%, rgba(3, 6, 3, .9));
       pointer-events: none;
     }
 
@@ -338,7 +358,7 @@ justify-content: center;
       margin-bottom: 18px;
       color: var(--green);
       font-size: clamp(5.5rem, 15vw, 11rem);
-      text-shadow: 0 8px 0 rgba(0,0,0,.64), 0 0 36px rgba(141,224,44,.14);
+      text-shadow: 0 8px 0 rgba(0, 0, 0, .64), 0 0 36px rgba(141, 224, 44, .14);
     }
 
     .hero-line {
@@ -350,7 +370,9 @@ justify-content: center;
       text-transform: uppercase;
     }
 
-    .hero-line span { color: var(--green-hot); }
+    .hero-line span {
+      color: var(--green-hot);
+    }
 
     .values {
       display: flex;
@@ -364,7 +386,9 @@ justify-content: center;
       text-transform: uppercase;
     }
 
-    .values span:nth-child(2) { color: var(--green-hot); }
+    .values span:nth-child(2) {
+      color: var(--green-hot);
+    }
 
     .actions {
       display: flex;
@@ -402,7 +426,7 @@ justify-content: center;
 
     .join {
       background:
-        linear-gradient(90deg, rgba(3,6,3,.94), rgba(3,6,3,.68), rgba(3,6,3,.92)),
+        linear-gradient(90deg, rgba(3, 6, 3, .94), rgba(3, 6, 3, .68), rgba(3, 6, 3, .92)),
         var(--image) center 34% / cover no-repeat;
     }
 
@@ -423,7 +447,7 @@ justify-content: center;
       background:
         linear-gradient(180deg, var(--panel-2), rgba(2, 7, 4, .92)),
         radial-gradient(circle at 50% 0, rgba(141, 224, 44, .12), transparent 60%);
-      box-shadow: 0 22px 55px rgba(0,0,0,.34);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, .34);
       backdrop-filter: blur(4px);
     }
 
@@ -450,29 +474,32 @@ justify-content: center;
     }
 
     .legend-card {
-   
+
       transition:
-    transform .45s ease,
-    box-shadow .45s ease,
-    border-color .45s ease;
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
       max-width: 520px;
       padding: 32px;
       border-left: 4px solid var(--green);
       background: rgba(3, 6, 3, .64);
     }
-      .legend-card:hover{
 
-    transform:translateY(-8px);
+    .legend-card:hover {
 
-    border-color:rgba(141,224,44,.65);
+      transform: translateY(-8px);
 
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.55),
-        0 0 45px rgba(141,224,44,.18);
+      border-color: rgba(141, 224, 44, .65);
 
-}
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, .55),
+        0 0 45px rgba(141, 224, 44, .18);
 
-    .legend-card strong { color: var(--green-hot); }
+    }
+
+    .legend-card strong {
+      color: var(--green-hot);
+    }
 
     .grid {
       display: grid;
@@ -499,7 +526,7 @@ justify-content: center;
       height: 58px;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(141,224,44,.36);
+      border: 1px solid rgba(141, 224, 44, .36);
       border-radius: 50%;
       background: rgba(141, 224, 44, .09);
       color: var(--gold);
@@ -547,12 +574,14 @@ justify-content: center;
       justify-content: space-between;
       gap: 18px;
       padding: 17px 0;
-      border-bottom: 1px solid rgba(141,224,44,.18);
+      border-bottom: 1px solid rgba(141, 224, 44, .18);
       color: var(--muted);
     }
 
     .facts li:last-child,
-    .official li:last-child a { border-bottom: 0; }
+    .official li:last-child a {
+      border-bottom: 0;
+    }
 
     .facts strong,
     .official strong {
@@ -561,7 +590,9 @@ justify-content: center;
     }
 
     .official a:hover span,
-    .official a:hover strong { color: var(--green-hot); }
+    .official a:hover strong {
+      color: var(--green-hot);
+    }
 
     .security-grid {
       display: grid;
@@ -592,7 +623,7 @@ justify-content: center;
         radial-gradient(circle at 50% 0, rgba(255, 213, 106, .14), transparent 60%),
         rgba(5, 12, 7, .86);
       text-align: center;
-      box-shadow: 0 22px 55px rgba(0,0,0,.28);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, .28);
     }
 
     .count-box strong {
@@ -622,9 +653,9 @@ justify-content: center;
       border: 1px solid var(--line);
       border-radius: 12px;
       background:
-        linear-gradient(180deg, rgba(11,24,12,.92), rgba(3, 8, 4, .92)),
-        radial-gradient(circle at 50% 0, rgba(141,224,44,.11), transparent 58%);
-      box-shadow: 0 22px 55px rgba(0,0,0,.32);
+        linear-gradient(180deg, rgba(11, 24, 12, .92), rgba(3, 8, 4, .92)),
+        radial-gradient(circle at 50% 0, rgba(141, 224, 44, .11), transparent 58%);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, .32);
     }
 
     .step-card .num {
@@ -705,7 +736,7 @@ justify-content: center;
 
     .roadmap {
       background:
-        linear-gradient(180deg, rgba(3,6,3,.9), rgba(3,6,3,.96)),
+        linear-gradient(180deg, rgba(3, 6, 3, .9), rgba(3, 6, 3, .96)),
         var(--image) center 68% / cover no-repeat;
     }
 
@@ -714,103 +745,101 @@ justify-content: center;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
       counter-reset: phase;
-      position:relative;
+      position: relative;
     }
-.roadmap-grid::before{
 
-content:"";
+    .roadmap-grid::before {
 
-position:absolute;
+      content: "";
 
-left:5%;
-right:5%;
+      position: absolute;
 
-top:22px;
+      left: 5%;
+      right: 5%;
 
-height:2px;
+      top: 22px;
 
-background:linear-gradient(
-90deg,
-transparent 0%,
-    rgba(141,224,44,.12) 20%,
-    rgba(141,224,44,.25) 50%,
-    rgba(141,224,44,.12) 80%,
-    transparent 100%
+      height: 2px;
 
-);
-z-index:0;
+      background: linear-gradient(90deg,
+          transparent 0%,
+          rgba(141, 224, 44, .12) 20%,
+          rgba(141, 224, 44, .25) 50%,
+          rgba(141, 224, 44, .12) 80%,
+          transparent 100%);
+      z-index: 0;
 
-}
+    }
+
     .phase {
       min-height: 210px;
       padding: 24px;
-      padding-top:50px;
-       position:relative;
-    overflow:hidden;
-z-index: 1;
-    transition:
-    transform .45s ease,
-box-shadow .45s ease,
-border-color .45s ease,
-background .45s ease,
-filter .45s ease;
-       backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-background:
-    linear-gradient(
-        180deg,
-        rgba(255,255,255,.05) 0%,
-        rgba(255,255,255,.015) 18%,
-        rgba(0,0,0,.05) 55%,
-        rgba(0,0,0,.15) 100%
-    ),
-    rgba(6,18,6,.72);
+      padding-top: 50px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease,
+        background .45s ease,
+        filter .45s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, .05) 0%,
+          rgba(255, 255, 255, .015) 18%,
+          rgba(0, 0, 0, .05) 55%,
+          rgba(0, 0, 0, .15) 100%),
+        rgba(6, 18, 6, .72);
 
-   border:1px solid rgba(141,224,44,.18);
-}
-.phase::after{
+      border: 1px solid rgba(141, 224, 44, .18);
+    }
 
-    content:"";
+    .phase::after {
 
-    position:absolute;
+      content: "";
 
-    top:0;
-    left:-120%;
+      position: absolute;
 
-    width:60%;
-    height:100%;
+      top: 0;
+      left: -120%;
 
-    background:linear-gradient(
+      width: 60%;
+      height: 100%;
 
-        90deg,
-        transparent,
-        rgba(141,224,44,.18),
-        transparent
-    );
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(141, 224, 44, .18),
+          transparent);
 
-    transform:skewX(-25deg);
+      transform: skewX(-25deg);
 
-    transition:left .8s ease;
+      transition: left .8s ease;
 
-}
-.phase:hover{
+    }
 
-    transform:translateY(-10px);
+    .phase:hover {
 
-    border-color:rgba(141,224,44,.65);
+      transform: translateY(-10px);
 
-    box-shadow:
-    0 24px 70px rgba(0,0,0,.48),
-    0 0 22px rgba(141,224,44,.16),
-    0 0 42px rgba(141,224,44,.08),
-    inset 0 1px 0 rgba(255,255,255,.08);
-    filter: brightness(1.05);
-}
-.phase:hover::after{
+      border-color: rgba(141, 224, 44, .65);
 
-    left:140%;
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, .48),
+        0 0 22px rgba(141, 224, 44, .16),
+        0 0 42px rgba(141, 224, 44, .08),
+        inset 0 1px 0 rgba(255, 255, 255, .08);
+      filter: brightness(1.05);
+    }
 
-}
+    .phase:hover::after {
+
+      left: 140%;
+
+    }
+
     .phase::before {
       counter-increment: phase;
       content: "PHASE 0" counter(phase);
@@ -819,36 +848,38 @@ background:
       color: var(--gold);
       font-weight: 900;
       letter-spacing: .07em;
-position: relative;
-z-index: 2;
+      position: relative;
+      z-index: 2;
     }
-.phase::after{
 
-    content:"";
+    .phase::after {
 
-    position:absolute;
+      content: "";
 
-    top:18px;
-    left:50%;
+      position: absolute;
 
-    width:14px;
-    height:14px;
+      top: 18px;
+      left: 50%;
 
-    transform:translateX(-50%);
+      width: 14px;
+      height: 14px;
 
-    border-radius:50%;
+      transform: translateX(-50%);
 
-    background:#8de02c;
+      border-radius: 50%;
 
-    box-shadow:
-       0 0 8px rgba(141,224,44,.45),
-    0 0 18px rgba(141,224,44,.35),
-    0 0 36px rgba(141,224,44,.18);
+      background: #8de02c;
 
-animation: roadmapPulse 2.8s ease-in-out infinite;
-    z-index:3;
+      box-shadow:
+        0 0 8px rgba(141, 224, 44, .45),
+        0 0 18px rgba(141, 224, 44, .35),
+        0 0 36px rgba(141, 224, 44, .18);
 
-}
+      animation: roadmapPulse 2.8s ease-in-out infinite;
+      z-index: 3;
+
+    }
+
     .faq {
       display: grid;
       gap: 14px;
@@ -863,261 +894,269 @@ animation: roadmapPulse 2.8s ease-in-out infinite;
       font-weight: 900;
     }
 
-    details p { padding: 0 22px 22px; }
+    details p {
+      padding: 0 22px 22px;
+    }
 
-/* ==========================================
+    /* ==========================================
    WHY DINODOXA
 ========================================== */
 
-#why-dinodoxa{
-    position:relative;
-    padding:100px 0;
-    background:
+    #why-dinodoxa {
+      position: relative;
+      padding: 100px 0;
+      background:
         linear-gradient(180deg,
-        rgba(3,6,3,.20),
-        rgba(3,6,3,.88)),
+          rgba(3, 6, 3, .20),
+          rgba(3, 6, 3, .88)),
         var(--image) center center/cover no-repeat;
-}
-.why-closing{
+    }
 
-    max-width:820px;
+    .why-closing {
 
-    margin:90px auto 0;
+      max-width: 820px;
 
-    text-align:center;
+      margin: 90px auto 0;
 
-}
+      text-align: center;
 
-.why-closing p{
+    }
 
-    color:var(--muted);
+    .why-closing p {
 
-    font-size:1.2rem;
+      color: var(--muted);
 
-    margin-bottom:14px;
+      font-size: 1.2rem;
 
-}
+      margin-bottom: 14px;
 
-.why-closing strong{
+    }
 
-    display:block;
+    .why-closing strong {
 
-    font-size:clamp(2rem,5vw,3.3rem);
+      display: block;
 
-    color:#fff;
+      font-size: clamp(2rem, 5vw, 3.3rem);
 
-    font-weight:900;
+      color: #fff;
 
-    line-height:1.15;
+      font-weight: 900;
 
-    margin-bottom:18px;
+      line-height: 1.15;
 
-}
+      margin-bottom: 18px;
 
-.why-closing span{
+    }
 
-    color:var(--green);
+    .why-closing span {
 
-    font-size:1.05rem;
+      color: var(--green);
 
-    letter-spacing:.08em;
+      font-size: 1.05rem;
 
-    text-transform:uppercase;
+      letter-spacing: .08em;
 
-}
-#why-dinodoxa .wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 24px;
-}
+      text-transform: uppercase;
 
-.section-heading{
-    max-width:820px;
-    margin:0 auto 70px;
-    text-align:center;
-}
-.section-label{
-    display:inline-block;
-    margin-bottom:14px;
-    color:var(--green);
-    font-size:.95rem;
-    font-weight:900;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-}
+    }
 
-.section-intro{
-    max-width:760px;
-    margin:28px auto 0;
-    color:var(--muted);
-    font-size:1.12rem;
-    line-height:1.8;
-}
-#why-dinodoxa .display{
+    #why-dinodoxa .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-   font-size:clamp(2rem,4vw,3.3rem);
+    .section-heading {
+      max-width: 820px;
+      margin: 0 auto 70px;
+      text-align: center;
+    }
 
-    line-height:1.05;
+    .section-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--green);
+      font-size: .95rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
-    margin:18px 0 24px;
+    .section-intro {
+      max-width: 760px;
+      margin: 28px auto 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.8;
+    }
 
-    color:#fff;
+    #why-dinodoxa .display {
 
-    text-shadow:0 4px 20px rgba(0,0,0,.45);
+      font-size: clamp(2rem, 4vw, 3.3rem);
 
-}
-.why-grid{
+      line-height: 1.05;
 
-    display:grid;
+      margin: 18px 0 24px;
 
-    grid-template-columns:repeat(3,minmax(0,1fr));
+      color: #fff;
 
-    gap:22px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, .45);
 
-    margin-top:70px;
+    }
 
-}
-.why-card{
+    .why-grid {
 
-    position:relative;
+      display: grid;
 
-    overflow:hidden;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    padding:34px;
+      gap: 22px;
 
-    border-radius:24px;
+      margin-top: 70px;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.03),
-            rgba(6,18,6,.88)
-        );
+    }
 
-    border:1px solid rgba(141,224,44,.18);
+    .why-card {
 
-    backdrop-filter:blur(18px);
+      position: relative;
 
-    transition:.35s ease;
+      overflow: hidden;
 
-}
-.why-card h3{
+      padding: 34px;
 
-    margin:0 0 14px;
+      border-radius: 24px;
 
-    font-size:1.25rem;
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, .03),
+          rgba(6, 18, 6, .88));
 
-    font-weight:800;
+      border: 1px solid rgba(141, 224, 44, .18);
 
-    color:#fff;
+      backdrop-filter: blur(18px);
 
-}
+      transition: .35s ease;
 
-.why-card strong{
+    }
 
-    display:block;
+    .why-card h3 {
 
-    margin-bottom:14px;
+      margin: 0 0 14px;
 
-    color:var(--green);
+      font-size: 1.25rem;
 
-    font-size:1rem;
+      font-weight: 800;
 
-    letter-spacing:.02em;
+      color: #fff;
 
-}
+    }
 
-.why-card p{
+    .why-card strong {
 
-    margin:0;
+      display: block;
 
-    color:var(--muted);
+      margin-bottom: 14px;
 
-    line-height:1.8;
+      color: var(--green);
 
-}
-.why-closing{
+      font-size: 1rem;
 
-    margin:80px auto 0;
+      letter-spacing: .02em;
 
-    max-width:760px;
+    }
 
-    text-align:center;
+    .why-card p {
 
-    font-size:1.35rem;
+      margin: 0;
 
-    line-height:1.8;
+      color: var(--muted);
 
-    color:var(--muted);
+      line-height: 1.8;
 
-}
+    }
 
-.why-closing strong{
+    .why-closing {
 
-    display:block;
+      margin: 80px auto 0;
 
-    margin-top:10px;
+      max-width: 760px;
 
-    font-size:2rem;
+      text-align: center;
 
-    color:#fff;
+      font-size: 1.35rem;
 
-}
-.why-card:hover{
+      line-height: 1.8;
 
-    transform:translateY(-8px);
+      color: var(--muted);
 
-    border-color:rgba(141,224,44,.45);
+    }
 
-    box-shadow:
+    .why-closing strong {
 
-        0 18px 40px rgba(0,0,0,.45),
+      display: block;
 
-        0 0 30px rgba(141,224,44,.12);
+      margin-top: 10px;
 
-}
-.why-card::before{
+      font-size: 2rem;
 
-    content:"";
+      color: #fff;
 
-    position:absolute;
+    }
 
-    top:0;
+    .why-card:hover {
 
-    left:-120%;
+      transform: translateY(-8px);
 
-    width:70%;
+      border-color: rgba(141, 224, 44, .45);
 
-    height:100%;
+      box-shadow:
 
-    background:
+        0 18px 40px rgba(0, 0, 0, .45),
 
-        linear-gradient(
+        0 0 30px rgba(141, 224, 44, .12);
 
-            90deg,
+    }
 
-            transparent,
+    .why-card::before {
 
-            rgba(255,255,255,.08),
+      content: "";
 
-            transparent
+      position: absolute;
 
-        );
+      top: 0;
 
-    transition:.8s;
+      left: -120%;
 
-}
-.why-card:hover::before{
+      width: 70%;
 
-    left:140%;
+      height: 100%;
 
-}
+      background:
+
+        linear-gradient(90deg,
+
+          transparent,
+
+          rgba(255, 255, 255, .08),
+
+          transparent);
+
+      transition: .8s;
+
+    }
+
+    .why-card:hover::before {
+
+      left: 140%;
+
+    }
+
     .footer {
       position: relative;
       overflow: hidden;
       padding: 78px 0 36px;
       background:
-        linear-gradient(90deg, rgba(3,6,3,.68), rgba(3,6,3,.74)),
+        linear-gradient(90deg, rgba(3, 6, 3, .68), rgba(3, 6, 3, .74)),
         var(--image) center bottom / cover no-repeat;
       text-align: center;
     }
@@ -1136,33 +1175,36 @@ animation: roadmapPulse 2.8s ease-in-out infinite;
       text-transform: uppercase;
     }
 
-    .footer h2 span { color: var(--green-hot); }
+    .footer h2 span {
+      color: var(--green-hot);
+    }
 
     .logo-word {
       margin-bottom: 14px;
       color: var(--green);
       font-size: clamp(3rem, 10vw, 6rem);
-      text-shadow: 0 8px 0 rgba(0,0,0,.48);
+      text-shadow: 0 8px 0 rgba(0, 0, 0, .48);
     }
 
     .footer-mark {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 18px;
-  border: 1px solid rgba(141, 224, 44, .38);
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  box-shadow: 0 0 40px rgba(141, 224, 44, .35);
-}
-   .footer-mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-} 
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+      border: 1px solid rgba(141, 224, 44, .38);
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      box-shadow: 0 0 40px rgba(141, 224, 44, .35);
+    }
+
+    .footer-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     .fineprint {
       max-width: 760px;
@@ -1175,7 +1217,7 @@ animation: roadmapPulse 2.8s ease-in-out infinite;
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      border-top: 1px solid rgba(141,224,44,.18);
+      border-top: 1px solid rgba(141, 224, 44, .18);
       padding-top: 22px;
       color: var(--green);
       font-size: .75rem;
@@ -1183,454 +1225,545 @@ animation: roadmapPulse 2.8s ease-in-out infinite;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
-/* =========================================
+
+    /* =========================================
    THE PROMISE
 ========================================= */
 
-#the-promise{
+    #the-promise {
 
-padding:140px 0;
+      padding: 140px 0;
 
-background:#050805;
+      background: #050805;
 
-position:relative;
+      position: relative;
 
-overflow:hidden;
+      overflow: hidden;
 
-}
-.promise-doxa{
+    }
 
-padding:120px 0;
+    .promise-doxa {
 
-}
+      padding: 120px 0;
 
-.promise-doxa h1{
+    }
 
-font-size:clamp(5rem,14vw,11rem);
+    .promise-doxa h1 {
 
-font-weight:900;
+      font-size: clamp(5rem, 14vw, 11rem);
 
-color:var(--green);
+      font-weight: 900;
 
-letter-spacing:8px;
+      color: var(--green);
 
-margin:0;
+      letter-spacing: 8px;
 
-text-shadow:0 0 40px rgba(141,224,44,.25);
+      margin: 0;
 
-}
+      text-shadow: 0 0 40px rgba(141, 224, 44, .25);
 
-.promise-doxa p{
+    }
 
-margin-top:30px;
+    .promise-doxa p {
 
-font-size:1.2rem;
+      margin-top: 30px;
 
-letter-spacing:2px;
+      font-size: 1.2rem;
 
-color:#d0d0d0;
+      letter-spacing: 2px;
 
-text-transform:uppercase;
+      color: #d0d0d0;
 
-}
+      text-transform: uppercase;
 
-/* =====================================
+    }
+
+    /* =====================================
    FINAL SCENE
 ===================================== */
 
-.promise-final{
+    .promise-final {
 
-    padding:180px 0;
+      padding: 180px 0;
 
-    text-align:center;
+      text-align: center;
 
-}
+    }
 
-.promise-final h1{
+    .promise-final h1 {
 
-    font-size:clamp(4rem,9vw,8rem);
+      font-size: clamp(4rem, 9vw, 8rem);
 
-    font-weight:900;
+      font-weight: 900;
 
-    color:var(--green);
+      color: var(--green);
 
-    margin:18px 0;
+      margin: 18px 0;
 
-    text-transform:uppercase;
+      text-transform: uppercase;
 
-}
+    }
 
-.promise-final h2{
+    .promise-final h2 {
 
-    font-size:clamp(1.8rem,3vw,2.8rem);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
 
-    color:#fff;
+      color: #fff;
 
-    margin:0;
+      margin: 0;
 
-    font-weight:700;
+      font-weight: 700;
 
-}
+    }
 
-.promise-final h3{
+    .promise-final h3 {
 
-    font-size:1.3rem;
+      font-size: 1.3rem;
 
-    letter-spacing:6px;
+      letter-spacing: 6px;
 
-    text-transform:uppercase;
+      text-transform: uppercase;
 
-    color:var(--green);
+      color: var(--green);
 
-    margin:18px 0;
+      margin: 18px 0;
 
-    opacity:.9;
+      opacity: .9;
 
-}
+    }
 
-#the-promise .wrap{
+    #the-promise .wrap {
 
-max-width:900px;
+      max-width: 900px;
 
-margin:auto;
+      margin: auto;
 
-text-align:center;
+      text-align: center;
 
-}
+    }
 
-.chapter-header{
+    .chapter-header {
 
-margin-bottom:80px;
+      margin-bottom: 80px;
 
-}
+    }
 
-.chapter-header span{
+    .chapter-header span {
 
-letter-spacing:4px;
+      letter-spacing: 4px;
 
-color:var(--green);
+      color: var(--green);
 
-font-weight:800;
+      font-weight: 800;
 
-font-size:.9rem;
+      font-size: .9rem;
 
-}
+    }
 
-.chapter-header h2{
+    .chapter-header h2 {
 
-margin:12px 0;
+      margin: 12px 0;
 
-font-size:clamp(2.8rem,7vw,5rem);
+      font-size: clamp(2.8rem, 7vw, 5rem);
 
-font-weight:900;
+      font-weight: 900;
 
-}
+    }
 
-.chapter-header p{
+    .chapter-header p {
 
-color:#c9c9c9;
+      color: #c9c9c9;
 
-font-size:1.15rem;
+      font-size: 1.15rem;
 
-}
+    }
 
-.promise-scene{
+    .promise-scene {
 
-opacity:0;
+      opacity: 0;
 
-transform:translateY(60px);
+      transform: translateY(60px);
 
-transition:
-opacity .9s ease,
-transform .9s ease;
+      transition:
+        opacity .9s ease,
+        transform .9s ease;
 
-}
-.promise-scene.active{
+    }
 
-opacity:1;
+    .promise-scene.active {
 
-transform:translateY(0);
+      opacity: 1;
 
-}
+      transform: translateY(0);
 
-.promise-scene h3{
+    }
 
-font-size:clamp(2rem,5vw,3.5rem);
+    .promise-scene h3 {
 
-line-height:1.2;
+      font-size: clamp(2rem, 5vw, 3.5rem);
 
-margin-bottom:40px;
+      line-height: 1.2;
 
-}
+      margin-bottom: 40px;
 
-.promise-scene p{
+    }
 
-font-size:1.25rem;
+    .promise-scene p {
 
-line-height:2;
+      font-size: 1.25rem;
 
-color:#d8d8d8;
+      line-height: 2;
 
-margin:18px 0;
+      color: #d8d8d8;
 
-}
+      margin: 18px 0;
+
+    }
+
     @media (max-width: 980px) {
-      .links { display: none; }
-      .hero { background-position: 58% top; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .mascot-panel { min-height: 560px; }
-      .split { grid-template-columns: 1fr; }
-      .grid,
-      .countdown-grid,
-      .steps-grid,
-      .social-grid,
-      .security-grid,
-      .roadmap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-.why-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-    @media (max-width: 640px) {
-      .wrap { width: min(100% - 24px, 1180px); }
-      .nav-inner { min-height: 66px; }
-      .brand { font-size: 1.8rem; }
-      .shield { width: 38px; height: 38px; }
-      .nav .btn { display: none; }
+      .links {
+        display: none;
+      }
+
       .hero {
-        min-height: auto;
-        background-position: 62% top;
-        .why-grid{
-    grid-template-columns:1fr;
-}
-
-#why-dinodoxa{
-    padding:80px 0;
-}
-
-.section-heading{
-    margin-bottom:44px;
-}
+        background-position: 58% top;
       }
-      .hero-grid { padding: 64px 0; width: min(100% - 24px, 1180px); }
-      .mascot-panel { min-height: 480px; border-radius: 14px; }
-      h1 { font-size: clamp(4.8rem, 25vw, 7rem); }
-      .hero-line { font-size: clamp(1.65rem, 8vw, 2.5rem); }
-      .btn { width: 100%; }
-      section { padding: 58px 0; }
-      .title { gap: 10px; }
-      .title::before,
-      .title::after { width: 34px; }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mascot-panel {
+        min-height: 560px;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+
       .grid,
       .countdown-grid,
       .steps-grid,
       .social-grid,
       .security-grid,
-      .roadmap-grid { grid-template-columns: 1fr; }
-      .facts li,
-      .official a,
-      .copyright {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .copyright { align-items: stretch; }
     }
-  /* ===== TOKENOMICS CHART ===== */
 
-#tokenChart{
-    filter: drop-shadow(0 0 12px rgba(141,224,44,.45))
-            drop-shadow(0 0 28px rgba(141,224,44,.20));
-    transition: all .35s ease;
-}
+    .why-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-#tokenChart:hover{
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 20px rgba(141,224,44,.75))
-            drop-shadow(0 0 42px rgba(141,224,44,.35));
-}
-#tokenChart:hover{
-    transform:scale(1.03);
-    filter:
-        drop-shadow(0 0 20px rgba(141,224,44,.75))
-        drop-shadow(0 0 42px rgba(141,224,44,.35));
-}
 
-/* ============================
+    #why-dinodoxa {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+       margin-bottom:44px;
+}
+ @media (max-width:640px) {   
+        .wrap {
+          width: min(100% - 24px, 1180px);
+        }
+
+        .nav-inner {
+          min-height: 66px;
+        }
+
+        .brand {
+          font-size: 1.8rem;
+        }
+
+        .shield {
+          width: 38px;
+          height: 38px;
+        }
+
+        nav .btn {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+          background-position: 62% top;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+      }
+.section-heading {
+      margin-bottom:44px;
+    
+    }
+
+    .hero-grid {
+      padding: 64px 0;
+      width: min(100% - 24px, 1180px);
+    }
+
+    .mascot-panel {
+      min-height: 480px;
+      border-radius: 14px;
+    }
+
+    h1 {
+      font-size: clamp(4.8rem, 25vw, 7rem);
+    }
+
+    .hero-line {
+      font-size: clamp(1.65rem, 8vw, 2.5rem);
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    section {
+      padding: 58px 0;
+    }
+
+    .title {
+      gap: 10px;
+    }
+
+    .title::before,
+    .title::after {
+      width: 34px;
+    }
+
+    .grid,
+    .countdown-grid,
+    .steps-grid,
+    .social-grid,
+    .security-grid,
+    .roadmap-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .facts li,
+    .official a,
+    .copyright {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .copyright {
+      align-items: stretch;
+    
+    }
+
+    /* ===== TOKENOMICS CHART ===== */
+
+    #tokenChart {
+      filter: drop-shadow(0 0 12px rgba(141, 224, 44, .45)) drop-shadow(0 0 28px rgba(141, 224, 44, .20));
+      transition: all .35s ease;
+    }
+
+    #tokenChart:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 20px rgba(141, 224, 44, .75)) drop-shadow(0 0 42px rgba(141, 224, 44, .35));
+    }
+
+    #tokenChart:hover {
+      transform: scale(1.03);
+      filter:
+        drop-shadow(0 0 20px rgba(141, 224, 44, .75)) drop-shadow(0 0 42px rgba(141, 224, 44, .35));
+    }
+
+    /* ============================
    TRANSPARENCY CENTER
 ============================ */
 
-.transparency-box{
-    margin:60px 0;
-    padding:40px;
-    border:1px solid rgba(141,224,44,.25);
-    border-radius:22px;
-    background:linear-gradient(180deg,rgba(5,10,5,.82),rgba(3,6,3,.72));
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 40px rgba(0,0,0,.45);
-}
+    .transparency-box {
+      margin: 60px 0;
+      padding: 40px;
+      border: 1px solid rgba(141, 224, 44, .25);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(5, 10, 5, .82), rgba(3, 6, 3, .72));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 40px rgba(0, 0, 0, .45);
+    }
 
-.transparency-box h2{
-    color:var(--green);
-    margin-bottom:15px;
-}
+    .transparency-box h2 {
+      color: var(--green);
+      margin-bottom: 15px;
+    }
 
-.transparency-box p{
-    color:var(--muted);
-}
+    .transparency-box p {
+      color: var(--muted);
+    }
 
-.transparency-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
-    margin-top:35px;
-}
+    .transparency-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
 
-.transparency-card{
-    padding:24px;
-    border-radius:18px;
-    border:1px solid rgba(141,224,44,.15);
-    background:rgba(255,255,255,.03);
-    transition:.3s;
-}
+    .transparency-card {
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid rgba(141, 224, 44, .15);
+      background: rgba(255, 255, 255, .03);
+      transition: .3s;
+    }
 
-.transparency-card:hover{
-    transform:translateY(-6px);
-    border-color:var(--green);
-    background:rgba(141,224,44,.06);
-}
+    .transparency-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--green);
+      background: rgba(141, 224, 44, .06);
+    }
 
-.transparency-card h3{
-    color:var(--green-hot);
-    margin-bottom:10px;
-}
+    .transparency-card h3 {
+      color: var(--green-hot);
+      margin-bottom: 10px;
+    }
 
-.transparency-card a{
-    color:var(--gold);
-    font-weight:700;
-}
-.wallet-status{
-    display:inline-block;
-    margin:10px 0 16px;
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:.72rem;
-    font-weight:800;
-    letter-spacing:.08em;
-}
+    .transparency-card a {
+      color: var(--gold);
+      font-weight: 700;
+    }
 
-.wallet-status.locked{
-    color:#8de02c;
-    background:rgba(141,224,44,.12);
-    border:1px solid rgba(141,224,44,.30);
-}
+    .wallet-status {
+      display: inline-block;
+      margin: 10px 0 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
 
-.wallet-status.public{
-    color:#66d9ff;
-    background:rgba(102,217,255,.12);
-    border:1px solid rgba(102,217,255,.30);
-}
+    .wallet-status.locked {
+      color: #8de02c;
+      background: rgba(141, 224, 44, .12);
+      border: 1px solid rgba(141, 224, 44, .30);
+    }
 
-.wallet-status.reserve{
-    color:#ffd56a;
-    background:rgba(255,213,106,.12);
-    border:1px solid rgba(255,213,106,.30);
-}
-/* ===== LIQUIDITY POOL PANEL ===== */
+    .wallet-status.public {
+      color: #66d9ff;
+      background: rgba(102, 217, 255, .12);
+      border: 1px solid rgba(102, 217, 255, .30);
+    }
 
-.lp-box{
-    margin-top:28px;
-    padding:26px;
-    border:1px solid var(--line);
-    border-radius:18px;
+    .wallet-status.reserve {
+      color: #ffd56a;
+      background: rgba(255, 213, 106, .12);
+      border: 1px solid rgba(255, 213, 106, .30);
+    }
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(6,14,7,.92),
-            rgba(2,7,4,.86)
-        );
+    /* ===== LIQUIDITY POOL PANEL ===== */
 
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.35);
+    .lp-box {
+      margin-top: 28px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
 
-    backdrop-filter:blur(8px);
-}
+      background:
+        linear-gradient(180deg,
+          rgba(6, 14, 7, .92),
+          rgba(2, 7, 4, .86));
 
-.lp-box h3{
-    margin:0 0 12px;
-    color:var(--green-hot);
-    font-size:1.25rem;
-}
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, .35);
 
-.lp-box p{
-    color:var(--muted);
-    line-height:1.7;
-    margin-bottom:18px;
-}
-  /* ===========================
+      backdrop-filter: blur(8px);
+    }
+
+    .lp-box h3 {
+      margin: 0 0 12px;
+      color: var(--green-hot);
+      font-size: 1.25rem;
+    }
+
+    .lp-box p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    /* ===========================
    PREMIUM SCROLL ANIMATION
 =========================== */
 
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
-  will-change:opacity,transform;
-}
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+      will-change: opacity, transform;
+    }
 
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* sedikit jeda agar muncul bergantian */
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-/* ===============================
+    /* sedikit jeda agar muncul bergantian */
+    .reveal-delay-1 {
+      transition-delay: .1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s;
+    }
+
+    /* ===============================
    LEGEND STORY
 ================================= */
 
-.story-line{
-    font-size:1.15rem;
-    line-height:1.9;
-    color:#d7d7d7;
-    margin:26px 0;
-    opacity:.92;
-    letter-spacing:.3px;
-}
-
-.story-ending{
-    margin-top:45px;
-    font-size:1.45rem;
-    font-weight:800;
-    color:var(--green-hot);
-    text-shadow:0 0 18px rgba(141,224,44,.45);
-}
-@keyframes roadmapPulse{
-
-    0%,100%{
-        transform:translateX(-50%) scale(1);
-        box-shadow:
-            0 0 8px rgba(141,224,44,.45),
-            0 0 18px rgba(141,224,44,.35),
-            0 0 36px rgba(141,224,44,.18);
+    .story-line {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #d7d7d7;
+      margin: 26px 0;
+      opacity: .92;
+      letter-spacing: .3px;
     }
 
-    50%{
-        transform:translateX(-50%) scale(1.18);
-        box-shadow:
-            0 0 14px rgba(141,224,44,.7),
-            0 0 30px rgba(141,224,44,.55),
-            0 0 55px rgba(141,224,44,.30);
+    .story-ending {
+      margin-top: 45px;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--green-hot);
+      text-shadow: 0 0 18px rgba(141, 224, 44, .45);
     }
 
-}
+    @keyframes roadmapPulse {
+
+      0%,
+      100% {
+        transform: translateX(-50%) scale(1);
+        box-shadow:
+          0 0 8px rgba(141, 224, 44, .45),
+          0 0 18px rgba(141, 224, 44, .35),
+          0 0 36px rgba(141, 224, 44, .18);
+      }
+
+      50% {
+        transform: translateX(-50%) scale(1.18);
+        box-shadow:
+          0 0 14px rgba(141, 224, 44, .7),
+          0 0 30px rgba(141, 224, 44, .55),
+          0 0 55px rgba(141, 224, 44, .30);
+      }
+
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
@@ -1657,36 +1790,27 @@ margin:18px 0;
       <div class="hero-grid">
         <div class="hero-content reveal reveal-delay-1">
           <div class="hero-badge reveal reveal-delay-1">
-  <img src="WhatsApp Image 2026-06-16 at 13.26.37.jpeg"
-       alt="DOXA Logo"
-       style="width:100%;height:100%;object-fit:contain;">
-</div>
+            <img src="WhatsApp Image 2026-06-16 at 13.26.37.jpeg" alt="DOXA Logo"
+              style="width:100%;height:100%;object-fit:contain;">
+          </div>
           <p class="eyebrow reveal reveal-delay-1">The Kingdom of Doxa</p>
           <h1 id="hero-title" class="reveal reveal-delay-2">DOXA</h1>
           <p class="hero-line reveal reveal-delay-3">The last dinosaur who built a kingdom <span>on Solana</span>
           </p>
-          
-<div class="contract-box reveal">
-  <p><strong>Contract Address</strong></p>
 
-  <input
-    type="text"
-    id="contractAddress"
-    value="F4fzoSvJAQ4E7qg83VRcfSGKsi82Z3gs2otF2JgKPzTx"
-    readonly
-    style="width:100%;
+          <div class="contract-box reveal">
+            <p><strong>Contract Address</strong></p>
+
+            <input type="text" id="contractAddress" value="F4fzoSvJAQ4E7qg83VRcfSGKsi82Z3gs2otF2JgKPzTx" readonly style="width:100%;
 padding:12px;
 border-radius:10px;
 border:1px solid #9cff1a;
 background:#111;
 color:#9cff1a;
 font-weight:700;
-"
-  >
+">
 
-  <button
-    onclick="copyContract()"
-  style="
+            <button onclick="copyContract()" style="
     margin-top:10px;
     padding:12px 24px;
     border:none;
@@ -1697,46 +1821,47 @@ font-weight:700;
     font-weight:800;
     text-transform:uppercase;
     box-shadow:0 0 15px rgba(156,255,26,.5);
-  "
->
-  Copy CA
-  </button>
-</div>
+  ">
+              Copy CA
+            </button>
+          </div>
           <div class="values" aria-label="Doxa values">
             <span>Unity</span>
             <span>Growth</span>
             <span>Glory</span>
           </div>
           <div class="actions">
-            <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Join The Kingdom</a>
+            <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Join The
+              Kingdom</a>
             <a class="btn" href="#buy">How To Buy</a>
             <a class="btn" href="#official-links">Official Links</a>
           </div>
         </div>
-        <div class="mascot-panel reveal reveal-delay-2" role="img" aria-label="DinoDoxa King mascot holding a glowing DOXA shield">
+        <div class="mascot-panel reveal reveal-delay-2" role="img"
+          aria-label="DinoDoxa King mascot holding a glowing DOXA shield">
 
-  <img
-    src="dinodoxa-king.png"
-    alt="DinoDoxa King"
-    style="width:100%;max-width:400px;height:auto;border-radius:16px;display:block;margin:0 auto 20px;"
-  >
+          <img src="dinodoxa-king.png" alt="DinoDoxa King"
+            style="width:100%;max-width:400px;height:auto;border-radius:16px;display:block;margin:0 auto 20px;">
 
-  <p class="mascot-caption">
-  <strong>DinoDoxa King</strong>
-  Cute, heroic, neon green, crowned, and built to carry the DOXA identity across web, socials, stickers, GIFs, and memes.
-</p>
+          <p class="mascot-caption">
+            <strong>DinoDoxa King</strong>
+            Cute, heroic, neon green, crowned, and built to carry the DOXA identity across web, socials, stickers, GIFs,
+            and memes.
+          </p>
 
-</div>
-</div>
-</section>
-<section id="join" class="join" aria-labelledby="join-title">
+        </div>
+      </div>
+    </section>
+    <section id="join" class="join" aria-labelledby="join-title">
       <div class="wrap split">
         <div class="panel">
           <h2 id="join-title">Join The Kingdom</h2>
-          <p>DinoDoxa is a culture-led Solana community built around a royal meme identity, strong visual energy, and long-term holder participation.</p>
+          <p>DinoDoxa is a culture-led Solana community built around a royal meme identity, strong visual energy, and
+            long-term holder participation.</p>
         </div>
         <div class="panel">
-          <p>The kingdom grows through raids, memes, announcements, creator content, and loyal citizens who keep the legend alive.</p>
+          <p>The kingdom grows through raids, memes, announcements, creator content, and loyal citizens who keep the
+            legend alive.</p>
           <div class="actions" style="margin-top: 26px;">
             <a class="btn btn-primary" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Community</a>
             <a class="btn" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Announcements</a>
@@ -1747,154 +1872,154 @@ font-weight:700;
 
     <div class="legend-card">
 
-<h2 class="display reveal reveal-delay-1" id="legend-title">
-The Legend Begins
-</h2>
+      <h2 class="display reveal reveal-delay-1" id="legend-title">
+        The Legend Begins
+      </h2>
 
-<p class="story-line reveal reveal-delay-1">
-Millions of years after extinction...
-</p>
+      <p class="story-line reveal reveal-delay-1">
+        Millions of years after extinction...
+      </p>
 
-<p class="story-line reveal reveal-delay-2">
-One dinosaur survived.
-</p>
+      <p class="story-line reveal reveal-delay-2">
+        One dinosaur survived.
+      </p>
 
-<p class="story-line reveal reveal-delay-3">
-His name was <strong>DinoDoxa.</strong>
-</p>
+      <p class="story-line reveal reveal-delay-3">
+        His name was <strong>DinoDoxa.</strong>
+      </p>
 
-<p class="story-line reveal">
-He didn't come back to rule.
+      <p class="story-line reveal">
+        He didn't come back to rule.
 
-He came back to unite.
-</p>
+        He came back to unite.
+      </p>
 
-<p class="story-line reveal">
-To build a Kingdom where trust is stronger than hype...
-</p>
+      <p class="story-line reveal">
+        To build a Kingdom where trust is stronger than hype...
+      </p>
 
-<p class="story-line reveal">
-Where Citizens stand together...
-</p>
+      <p class="story-line reveal">
+        Where Citizens stand together...
+      </p>
 
-<p class="story-ending reveal">
-👑 The Kingdom Begins.
-</p>
+      <p class="story-ending reveal">
+        👑 The Kingdom Begins.
+      </p>
 
-</div>
-      </div>
+    </div>
+    </div>
     </section>
 
-<!-- =====================================================
+    <!-- =====================================================
      CHAPTER II : THE PROMISE
 ====================================================== -->
 
-<section id="the-promise">
+    <section id="the-promise">
 
-    <div class="wrap">
+      <div class="wrap">
 
         <div class="chapter-header">
-            <h2>THE PROMISE</h2>
-            <p>A Promise Became A Kingdom.</p>
+          <h2>THE PROMISE</h2>
+          <p>A Promise Became A Kingdom.</p>
         </div>
 
         <!-- Scene 1 -->
         <div class="promise-scene">
-            <h3>Every Kingdom Begins With A Story.</h3>
+          <h3>Every Kingdom Begins With A Story.</h3>
         </div>
 
         <!-- Scene 2 -->
         <div class="promise-scene">
 
-            <p>Nearly eight years ago, two close friends shared one dream.</p>
+          <p>Nearly eight years ago, two close friends shared one dream.</p>
 
-            <p>It wasn't about fame.</p>
+          <p>It wasn't about fame.</p>
 
-            <p>It wasn't about wealth.</p>
+          <p>It wasn't about wealth.</p>
 
-            <p>It wasn't about creating another cryptocurrency.</p>
+          <p>It wasn't about creating another cryptocurrency.</p>
 
-            <p>It was about building something meaningful together.</p>
+          <p>It was about building something meaningful together.</p>
 
         </div>
 
         <!-- Scene 3 -->
         <div class="promise-scene">
 
-            <p>
-                During one of those conversations,
-                my friend gave our dream a name.
-            </p>
+          <p>
+            During one of those conversations,
+            my friend gave our dream a name.
+          </p>
 
         </div>
 
         <!-- Scene 4 -->
         <div class="promise-scene promise-doxa">
 
-            <h1>DOXA</h1>
+          <h1>DOXA</h1>
 
-            <p>
-                A Name<br>
-                That Was Never Forgotten.
-            </p>
+          <p>
+            A Name<br>
+            That Was Never Forgotten.
+          </p>
 
         </div>
-<div class="promise-scene">
+        <div class="promise-scene">
 
-    <p>
-        The moment I heard it,
-    </p>
+          <p>
+            The moment I heard it,
+          </p>
 
-    <p>
-        I knew it was the right name.
-    </p>
+          <p>
+            I knew it was the right name.
+          </p>
 
-    <p>
-        It wasn't just a name.
-    </p>
+          <p>
+            It wasn't just a name.
+          </p>
 
-    <p>
-        It was a promise.
-    </p>
+          <p>
+            It was a promise.
+          </p>
 
-</div>
-<div class="promise-scene promise-final">
+        </div>
+        <div class="promise-scene promise-final">
 
-    <h2>His Dream</h2>
+          <h2>His Dream</h2>
 
-    <h3>Became</h3>
+          <h3>Became</h3>
 
-    <h1>OUR PROMISE.</h1>
+          <h1>OUR PROMISE.</h1>
 
-    <br>
+          <br>
 
-    <h2>And That Promise</h2>
+          <h2>And That Promise</h2>
 
-    <h3>Became</h3>
+          <h3>Became</h3>
 
-    <h1>A KINGDOM.</h1>
+          <h1>A KINGDOM.</h1>
 
-</div>
-    </div>
+        </div>
+      </div>
 
 
-</section>
+    </section>
 
     <section id="why-dinodoxa" class="reveal" aria-labelledby="why-title">
-     <div class="wrap">
+      <div class="wrap">
 
-    <div class="section-heading">
+        <div class="section-heading">
 
-        <span class="section-label">
+          <span class="section-label">
             WHY DINODOXA
-        </span>
+          </span>
 
-        <h2 class="display" id="why-title">
+          <h2 class="display" id="why-title">
             More Than a Meme Coin.<br>
             A Kingdom Built to Last.
-        </h2>
+          </h2>
 
-        <p class="section-intro">
+          <p class="section-intro">
 
             DinoDoxa is more than a meme coin.
 
@@ -1904,15 +2029,15 @@ Where Citizens stand together...
             Our mission is to build something that lasts far beyond
             market cycles.
 
-        </p>
+          </p>
 
-    </div>
+        </div>
 
-    <div class="why-grid">
+        <div class="why-grid">
 
-        <!-- CARD 1 -->
+          <!-- CARD 1 -->
 
-        <article class="why-card">
+          <article class="why-card">
 
             <h3>🏰 Community First</h3>
 
@@ -1920,16 +2045,16 @@ Where Citizens stand together...
 
             <p>
 
-                Every Citizen helps shape the future of DinoDoxa
-                through participation, collaboration, and shared purpose.
+              Every Citizen helps shape the future of DinoDoxa
+              through participation, collaboration, and shared purpose.
 
             </p>
 
-        </article>
+          </article>
 
-        <!-- CARD 2 -->
+          <!-- CARD 2 -->
 
-        <article class="why-card">
+          <article class="why-card">
 
             <h3>🔒 Radical Transparency</h3>
 
@@ -1937,16 +2062,16 @@ Where Citizens stand together...
 
             <p>
 
-                Public wallets, open communication, and accountability
-                are the foundation of every decision we make.
+              Public wallets, open communication, and accountability
+              are the foundation of every decision we make.
 
             </p>
 
-        </article>
+          </article>
 
-        <!-- CARD 3 -->
+          <!-- CARD 3 -->
 
-        <article class="why-card">
+          <article class="why-card">
 
             <h3>🌱 Long-Term Vision</h3>
 
@@ -1954,16 +2079,16 @@ Where Citizens stand together...
 
             <p>
 
-                We are creating a Kingdom designed to grow beyond
-                market cycles and continue long into the future.
+              We are creating a Kingdom designed to grow beyond
+              market cycles and continue long into the future.
 
             </p>
 
-        </article>
+          </article>
 
-        <!-- CARD 4 -->
+          <!-- CARD 4 -->
 
-        <article class="why-card">
+          <article class="why-card">
 
             <h3>📈 Sustainable Organic Growth</h3>
 
@@ -1971,16 +2096,16 @@ Where Citizens stand together...
 
             <p>
 
-                Lasting communities are built through genuine engagement,
-                not artificial hype or empty promises.
+              Lasting communities are built through genuine engagement,
+              not artificial hype or empty promises.
 
             </p>
 
-        </article>
+          </article>
 
-        <!-- CARD 5 -->
+          <!-- CARD 5 -->
 
-        <article class="why-card">
+          <article class="why-card">
 
             <h3>👑 Strong Brand Identity</h3>
 
@@ -1988,117 +2113,117 @@ Where Citizens stand together...
 
             <p>
 
-                DinoDoxa is a Kingdom with its own story,
-                characters, culture, and vision.
+              DinoDoxa is a Kingdom with its own story,
+              characters, culture, and vision.
 
             </p>
 
-        </article>
+          </article>
 
-    </div>
+        </div>
 
-   
-<div class="why-closing reveal">
 
-    <p>
-        We are not building hype.
-    </p>
+        <div class="why-closing reveal">
 
-    <strong>
-        WE ARE BUILDING A KINGDOM.
-    </strong>
+          <p>
+            We are not building hype.
+          </p>
 
-    <span>
-        Built on trust. Powered by Citizens.
-    </span>
+          <strong>
+            WE ARE BUILDING A KINGDOM.
+          </strong>
 
-</div>
+          <span>
+            Built on trust. Powered by Citizens.
+          </span>
+
+        </div>
     </section>
 
     <section id="tokenomics" aria-labelledby="tokenomics-title">
       <div class="wrap split">
         <div class="panel">
-<h2 id="tokenomics-title">TOKENOMICS</h2>
+          <h2 id="tokenomics-title">TOKENOMICS</h2>
 
-<p>
-Built on transparency.<br>
-Driven by community.<br>
-Designed for long-term sustainability.
-</p>
+          <p>
+            Built on transparency.<br>
+            Driven by community.<br>
+            Designed for long-term sustainability.
+          </p>
 
-<p>
-Every allocation has a clear purpose in strengthening the Kingdom of Doxa and supporting its future growth.
-</p>
+          <p>
+            Every allocation has a clear purpose in strengthening the Kingdom of Doxa and supporting its future growth.
+          </p>
 
-<br>
+          <br>
 
-<p><strong>Total Supply</strong></p>
-<p>1,000,000,000 DOXA</p>
+          <p><strong>Total Supply</strong></p>
+          <p>1,000,000,000 DOXA</p>
 
-<br>
+          <br>
 
-<p><strong>👑 Kingdom Allocation</strong></p>
-          
-<div style="max-width:360px;margin:25px auto;">
-    <canvas id="tokenChart"></canvas>
-</div>
-<ul>
-<li><strong>💧 Liquidity</strong> — 40% (400,000,000 DOXA)</li>
-<li><strong>🎁 Community</strong> — 20% (200,000,000 DOXA)</li>
-<li><strong>📢 Marketing</strong> — 10% (100,000,000 DOXA)</li>
-<li><strong>🏛 Treasury</strong> — 15% (150,000,000 DOXA)</li>
-<li><strong>📦 Strategic Reserve</strong> — 15% (150,000,000 DOXA)</li>
-</ul>
+          <p><strong>👑 Kingdom Allocation</strong></p>
 
-<br>
+          <div style="max-width:360px;margin:25px auto;">
+            <canvas id="tokenChart"></canvas>
+          </div>
+          <ul>
+            <li><strong>💧 Liquidity</strong> — 40% (400,000,000 DOXA)</li>
+            <li><strong>🎁 Community</strong> — 20% (200,000,000 DOXA)</li>
+            <li><strong>📢 Marketing</strong> — 10% (100,000,000 DOXA)</li>
+            <li><strong>🏛 Treasury</strong> — 15% (150,000,000 DOXA)</li>
+            <li><strong>📦 Strategic Reserve</strong> — 15% (150,000,000 DOXA)</li>
+          </ul>
+
+          <br>
 
 
 
-</div>
+        </div>
         <div class="panel">
-    <h2>💧 LIQUIDITY POOL</h2>
+          <h2>💧 LIQUIDITY POOL</h2>
 
-<p>
-Built to Last.<br>
-Locked for Trust.
-</p>
+          <p>
+            Built to Last.<br>
+            Locked for Trust.
+          </p>
 
-<br>
+          <br>
 
-<p>
-Our liquidity is permanently locked to
-protect every Citizen of Doxa and ensure
-a stable future for the Kingdom.
-</p>
-<div class="lp-grid">
+          <p>
+            Our liquidity is permanently locked to
+            protect every Citizen of Doxa and ensure
+            a stable future for the Kingdom.
+          </p>
+          <div class="lp-grid">
 
-  <div class="lp-card">
-    <small>LP Allocation</small>
-    <h3>40%</h3>
-    <p>400,000,000 DOXA</p>
-  </div>
-<a href="#" class="lp-button">
-    🔒 View Lock on PinkLock →
-</a>
-  <div class="lp-card">
-    <small>Initial Liquidity</small>
-    <h3>20 SOL</h3>
-    <p>On Solana</p>
-  </div>
+            <div class="lp-card">
+              <small>LP Allocation</small>
+              <h3>40%</h3>
+              <p>400,000,000 DOXA</p>
+            </div>
+            <a href="#" class="lp-button">
+              🔒 View Lock on PinkLock →
+            </a>
+            <div class="lp-card">
+              <small>Initial Liquidity</small>
+              <h3>20 SOL</h3>
+              <p>On Solana</p>
+            </div>
 
-  <div class="lp-card">
-    <small>Lock Status</small>
-    <h3>🔒 LOCKED</h3>
-    <p>Locked Forever</p>
-  </div>
+            <div class="lp-card">
+              <small>Lock Status</small>
+              <h3>🔒 LOCKED</h3>
+              <p>Locked Forever</p>
+            </div>
 
-  <div class="lp-card">
-    <small>Locker</small>
-    <h3>PinkLock</h3>
-    <p>Third-party verified</p>
-  </div>
+            <div class="lp-card">
+              <small>Locker</small>
+              <h3>PinkLock</h3>
+              <p>Third-party verified</p>
+            </div>
 
-</div> 
+          </div>
         </div>
       </div>
     </section>
@@ -2119,21 +2244,21 @@ a stable future for the Kingdom.
       <div class="wrap">
         <h2 class="title" id="launch-title">Launch Countdown</h2>
         <div class="countdown-grid" aria-label="Launch countdown">
-         <div class="count-box">
-  <div><strong id="days">00</strong><span>Days</span></div>
-</div>
+          <div class="count-box">
+            <div><strong id="days">00</strong><span>Days</span></div>
+          </div>
 
-<div class="count-box">
-  <div><strong id="hours">00</strong><span>Hours</span></div>
-</div>
+          <div class="count-box">
+            <div><strong id="hours">00</strong><span>Hours</span></div>
+          </div>
 
-<div class="count-box">
-  <div><strong id="minutes">00</strong><span>Minutes</span></div>
-</div>
+          <div class="count-box">
+            <div><strong id="minutes">00</strong><span>Minutes</span></div>
+          </div>
 
-<div class="count-box">
-  <div><strong id="seconds">00</strong><span>Seconds</span></div>
-</div>
+          <div class="count-box">
+            <div><strong id="seconds">00</strong><span>Seconds</span></div>
+          </div>
         </div>
         <p class="fineprint">Official launch timing will be announced only through the DinoDoxa Telegram channels.</p>
       </div>
@@ -2166,115 +2291,115 @@ a stable future for the Kingdom.
         </div>
       </div>
     </section>
-<section id="transparency">
+    <section id="transparency">
 
-  <div class="wrap">
+      <div class="wrap">
 
-    <div class="transparency-box">
+        <div class="transparency-box">
 
-      <h2>TRANSPARENCY CENTER</h2>
+          <h2>TRANSPARENCY CENTER</h2>
 
-      <p>
-        Every important on-chain asset of the Kingdom is publicly visible and verifiable.
-      </p>
+          <p>
+            Every important on-chain asset of the Kingdom is publicly visible and verifiable.
+          </p>
 
-      <div class="transparency-grid">
+          <div class="transparency-grid">
 
-       <div class="transparency-card">
+            <div class="transparency-card">
 
-<h3>👑 Community Wallet</h3>
+              <h3>👑 Community Wallet</h3>
 
-<span class="wallet-status public">PUBLIC</span>
+              <span class="wallet-status public">PUBLIC</span>
 
-<p>
+              <p>
 
-<strong>Allocation:</strong> 20%<br>
+                <strong>Allocation:</strong> 20%<br>
 
-F7N3...34L1
+                F7N3...34L1
 
-</p>
+              </p>
 
-<a href="https://solscan.io/account/F7N3GN6nZErfZ1AXZBZ5XTew9zB8NvAEXzZRBbRc34L1" target="_blank">
+              <a href="https://solscan.io/account/F7N3GN6nZErfZ1AXZBZ5XTew9zB8NvAEXzZRBbRc34L1" target="_blank">
 
-View on Solscan →
+                View on Solscan →
 
-</a>
+              </a>
 
-</div>
+            </div>
 
-     <div class="transparency-card">
+            <div class="transparency-card">
 
-<h3>🏦 Treasury Wallet</h3>
+              <h3>🏦 Treasury Wallet</h3>
 
-<span class="wallet-status public">PUBLIC</span>
+              <span class="wallet-status public">PUBLIC</span>
 
-<p>
+              <p>
 
-<strong>Allocation:</strong> 15%<br>
+                <strong>Allocation:</strong> 15%<br>
 
-4zzf...yEH8
+                4zzf...yEH8
 
-</p>
+              </p>
 
-<a href="https://solscan.io/account/4zzf4q4DaKbov72Y6hrmDY6QJTLFMGdpa3NC3P2VyEH8" target="_blank">
+              <a href="https://solscan.io/account/4zzf4q4DaKbov72Y6hrmDY6QJTLFMGdpa3NC3P2VyEH8" target="_blank">
 
-View on Solscan →
+                View on Solscan →
 
-</a>
+              </a>
 
-</div>
+            </div>
 
-      <div class="transparency-card">
+            <div class="transparency-card">
 
-<h3>📢 Marketing Wallet</h3>
+              <h3>📢 Marketing Wallet</h3>
 
-<span class="wallet-status public">PUBLIC</span>
+              <span class="wallet-status public">PUBLIC</span>
 
-<p>
+              <p>
 
-<strong>Allocation:</strong> 10%<br>
+                <strong>Allocation:</strong> 10%<br>
 
-5ESH...wS4S
+                5ESH...wS4S
 
-</p>
+              </p>
 
-<a href="https://solscan.io/account/5ESHWwuyhEc5ph6Yv6ew5pNAVthi5a7R4TCbmgDUwS4S" target="_blank">
+              <a href="https://solscan.io/account/5ESHWwuyhEc5ph6Yv6ew5pNAVthi5a7R4TCbmgDUwS4S" target="_blank">
 
-View on Solscan →
+                View on Solscan →
 
-</a>
+              </a>
 
-</div>
+            </div>
 
-      <div class="transparency-card">
+            <div class="transparency-card">
 
-<h3>🛡 Strategic Reserve</h3>
+              <h3>🛡 Strategic Reserve</h3>
 
-<span class="wallet-status reserve">RESERVE</span>
+              <span class="wallet-status reserve">RESERVE</span>
 
-<p>
+              <p>
 
-<strong>Allocation:</strong> 15%<br>
+                <strong>Allocation:</strong> 15%<br>
 
-41jb...97e
+                41jb...97e
 
-</p>
+              </p>
 
-<a href="https://solscan.io/account/41jbGBjfWKsG8bmL2QYzivT4RsuZWY3dQAwEwmrKi97e" target="_blank">
+              <a href="https://solscan.io/account/41jbGBjfWKsG8bmL2QYzivT4RsuZWY3dQAwEwmrKi97e" target="_blank">
 
-View on Solscan →
+                View on Solscan →
 
-</a>
+              </a>
 
-</div>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
-
-  </div>
-
-</section>
+    </section>
     <section id="roadmap" class="roadmap reveal" aria-labelledby="roadmap-title">
       <div class="wrap">
         <h2 class="title" id="roadmap-title">Roadmap</h2>
@@ -2307,10 +2432,13 @@ View on Solscan →
         </div>
         <div class="panel">
           <ul class="official" aria-label="Official DinoDoxa links">
-            <li><a href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener"><strong>Telegram Community</strong><span>t.me/kingdomofdoxa</span></a></li>
-            <li><a href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener"><strong>Telegram Announcements</strong><span>t.me/DinoDoxaOfficial</span></a></li>
+            <li><a href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener"><strong>Telegram
+                  Community</strong><span>t.me/kingdomofdoxa</span></a></li>
+            <li><a href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener"><strong>Telegram
+                  Announcements</strong><span>t.me/DinoDoxaOfficial</span></a></li>
             <li><a href="mailto:hello@dinodoxa.com"><strong>Email</strong><span>hello@dinodoxa.com</span></a></li>
-            <li><a href="https://dinodoxa.com" target="_blank" rel="noopener"><strong>Website</strong><span>dinodoxa.com</span></a></li>
+            <li><a href="https://dinodoxa.com" target="_blank"
+                rel="noopener"><strong>Website</strong><span>dinodoxa.com</span></a></li>
           </ul>
         </div>
       </div>
@@ -2320,15 +2448,14 @@ View on Solscan →
       <div class="wrap">
         <h2 class="title" id="socials-title">Social Links</h2>
         <div class="social-grid" aria-label="DinoDoxa social links">
-          <a class="social-card" href="https://t.me/kingdomofdoxa" target="_blank" rel="noopener">Telegram<small>Community</small></a>
-          <a class="social-card" href="https://t.me/DinoDoxaOfficial" target="_blank" rel="noopener">Telegram<small>Announcements</small></a>
-          <a class="social-card"
-   href="https://x.com/dinodoxa"
-   target="_blank"
-   rel="noopener noreferrer">
-    𝕏 Official X
-    <small>@dinodoxa</small>
-</a>
+          <a class="social-card" href="https://t.me/kingdomofdoxa" target="_blank"
+            rel="noopener">Telegram<small>Community</small></a>
+          <a class="social-card" href="https://t.me/DinoDoxaOfficial" target="_blank"
+            rel="noopener">Telegram<small>Announcements</small></a>
+          <a class="social-card" href="https://x.com/dinodoxa" target="_blank" rel="noopener noreferrer">
+            𝕏 Official X
+            <small>@dinodoxa</small>
+          </a>
           <span class="social-card">Dexscreener<small>Coming Soon</small></span>
           <span class="social-card">Birdeye<small>Coming Soon</small></span>
           <span class="social-card">Jupiter<small>Coming Soon</small></span>
@@ -2336,7 +2463,7 @@ View on Solscan →
       </div>
     </section>
 
-    <section id="faq" class="reveal"  aria-labelledby="faq-title">
+    <section id="faq" class="reveal" aria-labelledby="faq-title">
       <div class="wrap">
         <h2 class="title" id="faq-title">FAQ</h2>
         <div class="faq">
@@ -2346,15 +2473,18 @@ View on Solscan →
           </details>
           <details>
             <summary>Where can I join the kingdom?</summary>
-            <p>Join the Telegram Community at https://t.me/kingdomofdoxa and follow announcements at https://t.me/DinoDoxaOfficial.</p>
+            <p>Join the Telegram Community at https://t.me/kingdomofdoxa and follow announcements at
+              https://t.me/DinoDoxaOfficial.</p>
           </details>
           <details>
             <summary>Why is there no live price or market cap?</summary>
-            <p>Market information should come from verified live sources only, so this page avoids simulated or unverified market data.</p>
+            <p>Market information should come from verified live sources only, so this page avoids simulated or
+              unverified market data.</p>
           </details>
           <details>
             <summary>Is this financial advice?</summary>
-            <p>No. DOXA is a meme coin community project. Crypto assets are volatile, so always do your own research.</p>
+            <p>No. DOXA is a meme coin community project. Crypto assets are volatile, so always do your own research.
+            </p>
           </details>
         </div>
       </div>
@@ -2365,12 +2495,9 @@ View on Solscan →
     <div class="wrap footer-content">
       <h2>One Dino. One Mission. <span>One Kingdom.</span></h2>
       <div class="footer-mark">
-  <img
-    src="WhatsApp Image 2026-06-16 at 13.26.37.jpeg"
-    alt="DOXA Logo"
-    style="width:100%;height:100%;object-fit:contain;"
-  >
-</div>
+        <img src="WhatsApp Image 2026-06-16 at 13.26.37.jpeg" alt="DOXA Logo"
+          style="width:100%;height:100%;object-fit:contain;">
+      </div>
       <div class="logo-word">DOXA</div>
       <div class="values" style="justify-content:center;">
         <span>Unity</span>
@@ -2384,20 +2511,18 @@ View on Solscan →
         <a class="btn" href="mailto:hello@dinodoxa.com">Email</a>
       </div>
       <div class="social-grid" style="margin-top: 18px;">
-      <a class="social-card"
-   href="https://x.com/dinodoxa"
-   target="_blank"
-   rel="noopener noreferrer">
-    𝕏 Official X
-    <small>@dinodoxa</small>
-</a>
+        <a class="social-card" href="https://x.com/dinodoxa" target="_blank" rel="noopener noreferrer">
+          𝕏 Official X
+          <small>@dinodoxa</small>
+        </a>
         <span class="social-card">Dexscreener<small>Coming Soon</small></span>
         <span class="social-card">Birdeye<small>Coming Soon</small></span>
         <span class="social-card">Raydium<small>Coming Soon</small></span>
         <span class="social-card">Jupiter<small>Coming Soon</small></span>
         <a class="social-card" href="mailto:hello@dinodoxa.com">Email<small>Contact</small></a>
       </div>
-      <p class="fineprint">Disclaimer: DOXA is a community-driven meme coin created for informational and entertainment purposes only. Crypto assets carry volatility and risk.</p>
+      <p class="fineprint">Disclaimer: DOXA is a community-driven meme coin created for informational and entertainment
+        purposes only. Crypto assets carry volatility and risk.</p>
       <div class="copyright">
         <span>&copy; 2026 DOXA. All rights reserved.</span>
         <span>Built on Solana</span>
@@ -2406,114 +2531,115 @@ View on Solscan →
     </div>
   </footer>
 
-<script>
-function copyContract() {
-  const contract = document.getElementById("contractAddress");
+  <script>
+    function copyContract() {
+      const contract = document.getElementById("contractAddress");
 
-  navigator.clipboard.writeText(contract.value);
+      navigator.clipboard.writeText(contract.value);
 
-  const btn = document.querySelector('button[onclick="copyContract()"]');
-  btn.innerText = "✓ COPIED";
+      const btn = document.querySelector('button[onclick="copyContract()"]');
+      btn.innerText = "✓ COPIED";
 
-  setTimeout(function() {
-    btn.innerText = "COPY CA";
-  }, 2000);
-}
-</script>
-<script>
-const ctx = document.getElementById('tokenChart');
+      setTimeout(function () {
+        btn.innerText = "COPY CA";
+      }, 2000);
+    }
+  </script>
+  <script>
+    const ctx = document.getElementById('tokenChart');
 
-if (ctx) {
-    new Chart(ctx,{
-        type:'doughnut',
-        data:{
-            labels:[
-                'Liquidity',
-                'Community',
-                'Marketing',
-                'Treasury',
-                'Strategic Reserve'
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Liquidity',
+            'Community',
+            'Marketing',
+            'Treasury',
+            'Strategic Reserve'
+          ],
+          datasets: [{
+            data: [40, 20, 10, 15, 15],
+            backgroundColor: [
+              '#8de02c',
+              '#46ff92',
+              '#ffd84d',
+              '#3fa7ff',
+              '#ff8c42'
             ],
-            datasets:[{
-                data:[40,20,10,15,15],
-                backgroundColor:[
-                    '#8de02c',
-                    '#46ff92',
-                    '#ffd84d',
-                    '#3fa7ff',
-                    '#ff8c42'
-                ],
-                borderColor:'#071007',
-                borderWidth:4
-            }]
+            borderColor: '#071007',
+            borderWidth: 4
+          }]
         },
-     
-options:{
-            responsive:true,
-            cutout:'62%',
-            plugins:{
-                legend:{
-                    position:'bottom',
-                    labels:{
-                        color:'#ffffff'
-                    }
-                }
+
+        options: {
+          responsive: true,
+          cutout: '62%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: '#ffffff'
+              }
             }
+          }
         }
-    });
-}
-</script>
- <script>
-const launchDate = new Date("August 1, 2026 00:00:00").getTime();
+      });
+    }
+  </script>
+  <script>
+    const launchDate = new Date("August 1, 2026 00:00:00").getTime();
 
-function updateCountdown(){
+    function updateCountdown() {
 
-    const now = new Date().getTime();
-    const distance = launchDate - now;
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-    if(distance <= 0){
+      if (distance <= 0) {
         document.getElementById("days").textContent = "00";
         document.getElementById("hours").textContent = "00";
         document.getElementById("minutes").textContent = "00";
         document.getElementById("seconds").textContent = "00";
         return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
     }
 
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    // ===========================
+    // PREMIUM SCROLL ANIMATION
+    // ===========================
 
-    document.getElementById("days").textContent = String(days).padStart(2,"0");
-    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
-}
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
 
-updateCountdown();
-setInterval(updateCountdown,1000);
-// ===========================
-// PREMIUM SCROLL ANIMATION
-// ===========================
+    }, {
+      threshold: 0.15
+    });
+    document.querySelectorAll('.promise-scene').forEach(scene => {
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
+      observer.observe(scene);
 
-},{
-  threshold:0.15
-});
-  document.querySelectorAll('.promise-scene').forEach(scene=>{
-
-observer.observe(scene);
-
-});
-document.querySelectorAll(".reveal, .promise-scene").forEach(el=>{
-  observer.observe(el);
-});
-</script> 
+    });
+    document.querySelectorAll(".reveal, .promise-scene").forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
+
 </html>
